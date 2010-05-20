@@ -1,0 +1,3 @@
+h1. M Kaito's Website
+
+This repo holds the data used to generate my page on github.
