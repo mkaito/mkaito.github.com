@@ -1,0 +1,22 @@
+---
+layout: default
+title: Michishige Kaito
+---
+<section id="articles">
+  <header>
+    <h1>Articles</h1>
+  </header>
+  <ul>
+    {% for article in site.posts %}
+    <li><span>{{ article.date | date_to_string }}</span> &raquo; <a href="{{ article.url }}">{{ article.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+<section id="projects">
+  <header>
+    <h1>Open Source Projects</h1>
+  </header>
+  <ul>
+    <li><a href="http://github.com/mkaito/HaikuUI/">HaikuUI:</a> A haiku-inspired UI mod for the game Everquest 2.</li>
+  </ul>
+</section>
