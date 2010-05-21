@@ -68,14 +68,12 @@ div#content {
 }
 
 div#content section { padding: 24px 0;}
-div#content section h2 { margin: 12px 0; }
+div#content section h2,
+div#content article h2 { margin: 12px 0; }
 
 section#articles ul li span { font-weight: bold; }
 
-div#content section h2,
-div#content article h2, {
-  font-size: 1.6em;
-}
+div#content section h2 { font-size: 1.6em; }
 
 div#content a { color: #fff; }
 
