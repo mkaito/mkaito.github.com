@@ -1,14 +1,12 @@
 <!DOCTYPE html><html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>{{ site.title }}</title>
+      <title>{{ page.title }}</title>
     </meta>
     <!--[if IE]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="/ie.css" type="text/css" />
     <![endif]-->
-    <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
-
     <!-- Homepage CSS -->
     <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
   </head>
@@ -16,14 +14,8 @@
     <div id="site">
       <header id="branding">
         <h1>Michishige Kaito</h1>
+        <p>Home on the web to the hobby programmer, horrible designer, video gamer, Mr Fix-it-all, Chris Webstar aka Michishige Kaito. I love to write, share, express and flesh out cool ideas and things I come across, things that make me think, and thoughts that create things.</p>
       </header>
-      
-      <nav>
-        <ul>
-          <li><a href="/" rel="home">Index</a></li>
-          <li><a href="/HaikuUI">HaikuUI</a></li>
-        </ul>
-      </nav>
       
       <div id="content">
         {{ content }}
