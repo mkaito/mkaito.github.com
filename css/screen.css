@@ -28,7 +28,7 @@ header#branding h1 {
     font-size: 3em;
 }
 
-header#branding h1 a { color: white; }
+header#branding h1 a { color: #AFAFAF; }
 header#branding h1 a:hover { text-decoration: none }
 
 header#branding p { margin: 16px 0; }
