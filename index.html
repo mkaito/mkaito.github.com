@@ -9,11 +9,12 @@ title: Michishige Kaito
   <ul>
     {% for article in site.posts %}
     <li>
-      <div class="postMeta">{{ article.date | date:"%a, %d.%b.%Y" }}</div>
+      <div class="meta">{{ article.date | date:"%a, %b %d %Y" }}</div>
       <h3><a href="{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h3>
       <div class="entry">
         <p class="byline">{{ article.byline }}</p>
         <p>{{ article.content | truncatewords:60 }}</p>
+        <p class="byline"><a href="{{ article.url }}" title="{{ article.title }}">Continue reading..</a>.</p>
       </div>
     </li>
 
