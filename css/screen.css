@@ -70,7 +70,7 @@ div#content section h2,
 div#content article h2 { margin: 12px 0; }
 
 /* Section: Articles */
-section#articles div#postMeta {
+section#articles div#meta {
     text-transform: uppercase;
     margin-bottom: 16px;
     color: #CCC;
@@ -90,7 +90,7 @@ section#articles h3 {
     text-align: left;
 }
 
-section#articles h2 a {
+section#articles h3 a {
     color: #333;
     display: block;
     font-weight: 400;
@@ -99,7 +99,7 @@ section#articles h2 a {
     width: 100%;
 }
 
-section#arcitles h2 a:hover{ 
+section#arcitles h3 a:hover{ 
     color:#F49300;
     cursor:pointer;
 }
