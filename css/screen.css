@@ -77,6 +77,9 @@ div#content section h2 { font-size: 1.6em; }
 
 div#content a { color: #fff; }
 
+div#content p { margin-bottom: 1.6em; }
+div#content img { margin: 0 auto; } /* center images in content by default */
+
 /* Site footer */
 footer#footer {
   font-size: 0.7em;
