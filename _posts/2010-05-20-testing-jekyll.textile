@@ -1,7 +1,0 @@
----
-layout: post
-title: Testing Jekyll
-meta: 20 May 2010 - Lanzarote
----
-
-This is really nothing but a bogus entry so I can see "Jekyll":http://github.com/mojombo/jekyll in action.

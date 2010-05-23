@@ -2,7 +2,10 @@
 layout: default
 ---
 <article>
-  <header><h2>{{ page.title }}</h2></header>
+  <header>
+    <h2>{{ page.title }}</h2>
+    {% if page.byline %}<p class="byline">{{ page.byline }}</p>{% endif %}
+  </header>
   {{ content }}
   <footer><p>{{ page.meta }}</p></footer>
 </article>

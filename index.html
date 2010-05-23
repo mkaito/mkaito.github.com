@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Michishige Kaito
+title: Home
 ---
 <section id="articles">
   <header>
@@ -12,7 +12,7 @@ title: Michishige Kaito
       <div class="meta">{{ article.date | date:"%a, %b %d %Y" }}</div>
       <h3><a href="{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h3>
       <div class="entry">
-        <p class="byline">{{ article.byline }}</p>
+        {% if article.byline %}<p class="byline">{{ article.byline }}</p>{% endif %}
         <p>{{ article.content | truncatewords:60 }}</p>
         <p class="byline"><a href="{{ article.url }}" title="{{ article.title }}">Continue reading..</a>.</p>
       </div>
@@ -21,12 +21,14 @@ title: Michishige Kaito
     {% endfor %}
   </ul>
 </section>
-<section id="projects">
-  <header>
-    <h2>Code</h2>
-  </header>
-  <ul>
-    <li><a href="http://github.com/mkaito/HaikuUI/">/haiku-ui</a> &raquo; A haiku-inspired UI mod for the game Everquest 2.</li>
-    <li><a href="http://github.com/mkaito/Raider/">/raider</a> &raquo; A community website for a raiding guild.</li>
-  </ul>
-</section>
+<aside id="sidebar">
+  <section id="projects">
+    <header>
+      <h2>Code</h2>
+    </header>
+    <ul>
+      <li><a href="http://github.com/mkaito/HaikuUI/">/haiku-ui</a> &raquo; A haiku-inspired UI mod for the game Everquest 2. Work in progress.</li>
+      <li><a href="http://github.com/mkaito/Raider/">/raider</a> &raquo; A community website for a raiding guild.</li>
+    </ul>
+  </section>
+</aside>
