@@ -24,10 +24,11 @@ h6 { font-size: 1em; }
 /* Links */
 a, a:link, a:visited, a:hover {
   text-decoration: none;
+  color: #0b0f11;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #ed1400;
 }
 
 /* Body text */

@@ -1,3 +1,4 @@
 h1. M Kaito's Website
 
-This repo holds the data used to generate my page on github.
+This repo holds the data used to generate my pages and journal on
+github.
