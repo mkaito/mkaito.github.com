@@ -8,7 +8,7 @@ body {
 }
 
 div#border {
-    width: 62em;
+    width: 42em;
     margin: 5em auto 5em;
     padding: 0;
     border: 1px solid #AFAFAF;
@@ -18,7 +18,7 @@ div#border {
 
 div#container {
   margin: 2em auto;
-  width: 57em;
+  width: 90%;
   padding: 1em 0 0 0;
   position: relative;
   background-color: #fff;
@@ -63,6 +63,7 @@ header#branding h2 {            /*Tagline*/
 }
 
 header#branding h3 {            /*Semi hidden headline, big text*/
+    display: none;
     font-family: 'Hoefler Text', Georgia, 'Times New Roman', Times, serif;
     font-size: 6.8em;
     line-height: 0.4em;
