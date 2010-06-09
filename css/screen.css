@@ -62,13 +62,6 @@ header#branding h2 {            /*Tagline*/
     margin: 0;
 }
 
-header#branding h3 {            /*Semi hidden headline, big text*/
-    display: none;
-    font-family: 'Hoefler Text', Georgia, 'Times New Roman', Times, serif;
-    font-size: 6.8em;
-    line-height: 0.4em;
-    margin-top: 0.8em;
-}
 /* }}} */
 
 /* {{{ Content */
