@@ -109,7 +109,7 @@ article > header h1 time {
     text-transform: uppercase;
     font-size: 0.6em;
     letter-spacing: 0.1em;
-    color: #aaa;
+    color: #444;
 }
 
 article > header h2 {	      /* bylines */
@@ -122,7 +122,8 @@ article > header h2 {	      /* bylines */
 }
 
 section > article p {		/* Content text for links */
-    margin-top: -0.7em;
+    margin-top: -0.2em;
+    margin-left: 1.5em;
     font-size: 0.7em;
 }
 
