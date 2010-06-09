@@ -15,6 +15,7 @@ title: Home
         {% if article.byline %}<p class="byline">{{ article.byline }}</p>{% endif %}
         <p>{% if article.link %}{{ article.content }}{% else %}{{ article.content | truncatewords:60 }}{% endif %}</p>
         {% unless article.link %}<p class="byline"><a href="{{ article.url }}" title="{{ article.title }}">Continue reading..</a>.</p>{% endif %}
+	{% if article.link %}<p>{{article.link}}</p>{% endif %}
       </div>
     </li>
     {% endfor %}
