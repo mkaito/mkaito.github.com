@@ -1,34 +1,35 @@
 ---
 layout: default
-title: Home
+title: Index
 ---
-<section id="articles">
+<section>
   <header>
-    <h2>Thoughts</h2>
+    <hgroup>
+      <h1>Thoughts</h1>
+      <h2>Articles &amp; Links</h2>
+    </hgroup>
   </header>
-  <ul>
-    {% for article in site.posts %}
-    <li>
-      <div class="meta">{{ article.date | date:"%a, %b %d %Y" }}</div>
-      <h3><a href="{% if article.link  %}{{ article.link }}{% else %}{{ article.url }}{% endif %}" title="{{ article.title }}">{{ article.title }}</a></h3>
-      <div class="entry">
-        {% if article.byline %}<p class="byline">{{ article.byline }}</p>{% endif %}
-        <p>{% if article.link %}{{ article.content }}{% else %}{{ article.content | truncatewords:60 }}{% endif %}</p>
-        {% unless article.link %}<p class="byline"><a href="{{ article.url }}" title="{{ article.title }}">Continue reading..</a>.</p>{% endunless %}
-      </div>
-    </li>
-    {% endfor %}
+  {% for article in site.posts %}
+  <article>
+    <header>
+      <h1><time datetime="{{ article.date | date:"%Y-%m-%d" }}" pubdate>{{ article.meta }}</time> &raquo; <a href="{% if article.link  %}{{ article.link }}{% else %}{{ article.url }}{% endif %}" title="{{ article.title }}">{{ article.title }}</a></h1>
+    </header>{% if article.link %}
+    {{ article.content }}{% endif %}
+  </article>
+  {% endfor %}
+</section>
+
+<section>
+  <header>
+    <hgroup>
+      <h1>Code</h1>
+      <h2>My slice of open source</h2>
+    </hgroup>
+  </header>
+  <ul id="projects">
+    <li><a href="http://github.com/mkaito/HaikuUI/">&raquo; eq2ui/haiku</a>A haiku-inspired UI mod for the game Everquest 2. I work on this as I find the time.</li>
+    <li><a href="http://github.com/mkaito/Raider/">&raquo; web/raider</a>A community website for a raiding guild. Was a very interesting exercise, and I keep this as my playground for certain ideas.</li>
+    <li><a href="http://github.com/mkaito/dotfiles/">&raquo; personal/dotfiles</a>My configuration files for a host of software, including Emacs, (G)vim, awesome window manager, zsh, etc...</li>
   </ul>
 </section>
-<aside id="sidebar">
-  <section id="projects">
-    <header>
-      <h2>Code</h2>
-    </header>
-    <ul>
-      <li><a href="http://github.com/mkaito/HaikuUI/">&raquo; eq2ui/haiku</a>A haiku-inspired UI mod for the game Everquest 2. Work in progress.</li>
-      <li><a href="http://github.com/mkaito/Raider/">&raquo; merb/raider</a>A community website for a raiding guild.</li>
-      <li><a href="http://github.com/mkaito/dotfiles/">&raquo; conf/dotfiles</a>My configuration files for a host of software, including Emacs, (G)vim, awesome window manager, zsh, etc...</li>
-    </ul>
-  </section>
-</aside>
+

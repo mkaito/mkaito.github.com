@@ -7,7 +7,7 @@ body {
     color: #0B0F11;
 }
 
-div#border {
+#border {
     width: 42em;
     margin: 5em auto 5em;
     padding: 0;
@@ -16,7 +16,7 @@ div#border {
     position: relative;
 }
 
-div#container {
+#container {
   margin: 2em auto;
   width: 90%;
   padding: 1em 0 0 0;
@@ -31,35 +31,35 @@ div#container {
 /* }}} */
 
 /* {{{ Header */
-header#branding { 
+#container > header { 
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
   margin: 0 1em;
-  text-align: left;
+  height: 13em;
   color: #222;
   overflow: hidden;
+  background: transparent url("/images/site/headers/bg_steampunk_03.jpg") no-repeat center bottom;
+  background-size: cover;
+  position: relative;
 }
 
-header#branding h1 {            /*Name header with link back*/
-  font-size: 1em;
-  margin: 0 0.5em 0 0;
+#container > header h1 {            /*Name header with link back*/
+  font-size: 2em;
   letter-spacing: -1px;
   text-transform: uppercase;
   font-weight: 800;
-  line-height: 1em;
-  float: left;
+  position: absolute;
+  right: -0.1em;
+  bottom: -0.1em;
 }
 
-header#branding h1 a:hover {
-    text-decoration: none
+#container > header h1 a {
+    color: white;
 }
 
-header#branding h2 {            /*Tagline*/
-    font-size: 0.8em;
-    line-height: 1.3em;
-    text-align: justify;
-    font-weight: lighter;
-    margin: 0;
+#container > header h1 a:hover {
+    text-decoration: none;
+    color: #ed1400;
 }
 
 /* }}} */
@@ -74,82 +74,80 @@ div#content p {
   padding: 0 0 0.5em;
 }
 
-/* Content header */
-section header { border-bottom: 1px solid #0b0f11; }
-section header h2 {
+#content > section { margin-bottom: 3em; }
+
+/* Section headers */
+section > header {
+    border-bottom: 1px solid #0b0f11;
+    overflow: hidden;
+    height: 1em;
+    margin-bottom: 1em;
+}
+section > header h1,
+section > header h2 {
     font-size: 1em;
     color: #0b0f11;
-    line-height: 0.67em;
 }
-
-/* {{{ Section: Articles */
-section#articles div#meta, article footer p {
-    text-transform: uppercase;
-    margin-bottom: 1em;
-    color: #CCC;
-    font-family: 'Lucida Grande', Geneva, Helvetica, sans-serif;
-    font-size: 0.6em;
-    font-variant: normal;
-    font-weight: lighter;
-    letter-spacing: 0.2em;
-    text-align: left;
-}
-
-section#articles h3 {
-    margin-top: 5px;
-}
-
-section#articles h3 a {
-    font-family: 'Hoefler Text', Georgia, 'Times New Roman', Times, serif;
-    font-weight: lighter;
-    font-size: 1.3em;
-}
-
-section#articles ul li {
-    margin-bottom: 3em;
-}
-
-section#articles p.byline, article p.byline {
-    /* border-bottom: 1px dotted #DEDEDE; */
+section > header h1 { float: left; }
+section > header h2 {
+    float: right;
     color: #666;
     font-family: 'Lucida Grande', Geneva, Helvetica, sans-serif;
     font-size: 0.57em;
     letter-spacing: 0.2em;
-    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+/* {{{ Articles */
+article > header h1 {
+    font-family: 'Hoefler Text', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+article > header h1 time {
+    text-transform: uppercase;
+    font-size: 0.6em;
+    letter-spacing: 0.1em;
+    color: #aaa;
+}
+
+article > header h2 {	      /* bylines */
+    color: #666;
+    font-family: 'Lucida Grande', Geneva, Helvetica, sans-serif;
+    font-size: 0.57em;
+    letter-spacing: 0.2em;
     padding: 0;
     text-transform: uppercase;
 }
 
-section#articles img, article img {
+section > article p {		/* Content text for links */
+    margin-top: -0.7em;
+    font-size: 0.7em;
+}
+
+section > article p:first-line {
+    margin-left: 2em;
+}
+
+article img {
     margin: 0.3em 2em 0 0;
 }
 
-section#articles p.caption, article p.caption {
+article img + p { 		/* img caption */
     font-size: 0.7em;
     margin: -1.3em 0 1.2em 0;
 }
 /* }}} */
 
-/* {{{ Sidebar */
+/* {{{ Code section */
 
-/* Make sidebar */
-/* section#articles { */
-/*     width: 650px; */
-/*     float: left; */
-/* } */
-
-/* aside#sidebar { */
-/*     float: right; */
-/*     width: 220px; */
-/* } */
-
-aside#sidebar section#projects ul li {
+section ul#projects li {
   color: #444;
   font-size: 0.9em;
   margin: 12px 0 6px;
 }
-aside#sidebar section#projects ul li a { display: block; }
-/* }}} */
+section ul#projects li a { display: block; }
 /* }}} */
 
 /* {{{ Site footer */
