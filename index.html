@@ -10,14 +10,13 @@ title: Home
     {% for article in site.posts %}
     <li>
       <div class="meta">{{ article.date | date:"%a, %b %d %Y" }}</div>
-      <h3><a href="{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h3>
+      <h3><a href="{% if article.link  %}{{ article.link }}{% else %}{{ article.url }}{% endif %}" title="{{ article.title }}">{{ article.title }}</a></h3>
       <div class="entry">
         {% if article.byline %}<p class="byline">{{ article.byline }}</p>{% endif %}
-        <p>{{ article.content | truncatewords:60 }}</p>
-        <p class="byline"><a href="{{ article.url }}" title="{{ article.title }}">Continue reading..</a>.</p>
+        <p>{% if article.link %}{{ article.content }}{% else %}{{ article.content | truncatewords:60 }}{% endif %}</p>
+        {% unless article.link %}<p class="byline"><a href="{{ article.url }}" title="{{ article.title }}">Continue reading..</a>.</p>{% endif %}
       </div>
     </li>
-
     {% endfor %}
   </ul>
 </section>
