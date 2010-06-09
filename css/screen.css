@@ -133,15 +133,15 @@ section#articles p.caption, article p.caption {
 /* {{{ Sidebar */
 
 /* Make sidebar */
-section#articles {
-    width: 650px;
-    float: left;
-}
+/* section#articles { */
+/*     width: 650px; */
+/*     float: left; */
+/* } */
 
-aside#sidebar {
-    float: right;
-    width: 220px;
-}
+/* aside#sidebar { */
+/*     float: right; */
+/*     width: 220px; */
+/* } */
 
 aside#sidebar section#projects ul li {
   color: #444;
