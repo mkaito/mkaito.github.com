@@ -1,0 +1,15 @@
+---
+title: What about HTML5?
+layout: post
+meta: At some point -- Arrecife
+byline: Why do I need to care?
+---
+* What's the hype?
+* Is it really better?
+* Compatibility with old browsers
+* Examples
+* Resources
+
+A few links:
+
+* A few images of html5 content displayed in a Newton MessagePad 2100, a devide that predates HTML5 by quite a bit. Example of awesome graceful degradation. http://www.flickr.com/photos/splorp/sets/72157624225682388/
