@@ -8,8 +8,9 @@ var setRandomHeaderBg = function() {
 			   'bg_steampunk_03.jpg'];
 	
 	var randBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-	console.log("/images/site/headers/" + randBg);
-	return "url('/images/site/headers/" + randBg + "')";});
+	var randomHeaderBgPath = "url('/images/site/headers/" + randBg + "')";
+	// console.log(randomHeaderBgPath);
+	return randomHeaderBgPath;});
 };
 
 $(document).ready(function(){
