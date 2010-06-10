@@ -1,6 +1,6 @@
 ---
 title: Steampunk Inspiration
-byline: As a die-hard steampunk fan, all I can say is: Amazing.
+byline: "As a die-hard steampunk fan, all I can say is: Amazing."
 meta: June 9 2010 -- Arrecife
 link: http://psd.tutsplus.com/articles/inspiration/running-like-clockwork-steampunk-art-to-inspire-you/
 ---

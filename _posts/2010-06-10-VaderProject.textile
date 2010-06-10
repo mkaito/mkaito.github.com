@@ -1,6 +1,6 @@
 ---
 title: The Vader Project
 link: http://www.fubiz.net/galleries/set/the-vader-project/
-meta: June 10 2010 -- Floating in Space
-byline: What can I say, other than "Epic"?
+meta: "June 10 2010 -- Floating in Space"
+byline: "What can I say, other than "Epic"?"
 ---
