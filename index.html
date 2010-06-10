@@ -19,7 +19,7 @@ title: Index
 	<h2>&raquo; <time datetime="{{ article.date | date:"%Y-%m-%d" }}" pubdate>{{ article.meta }}</time></h2>
       </hgroup>
     </header>{% if article.byline %}
-    {{ article.byline | textile }}{% endif %}
+    <p>{{ article.byline }}</p>{% endif %}
   </article>
   {% endfor %}
 </section>
