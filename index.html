@@ -12,9 +12,14 @@ title: Index
   {% for article in site.posts %}
   <article>
     <header>
-      <h1><time datetime="{{ article.date | date:"%Y-%m-%d" }}" pubdate>{{ article.meta }}</time> &raquo; <a href="{% if article.link  %}{{ article.link }}{% else %}{{ article.url }}{% endif %}" title="{{ article.title }}">{{ article.title }}</a></h1>
-    </header>{% if article.link %}
-    {{ article.content }}{% endif %}
+      <hgroup>
+	<h1>
+	  {% if article.link %}&#x2665;{% else %}&#9733;{% endif %} <a href="{% if article.link  %}{{ article.link }}{% else %}{{ article.url }}{% endif %}" title="{{ article.title }}">{{ article.title }}</a>
+	</h1>
+	<h2>&raquo; <time datetime="{{ article.date | date:"%Y-%m-%d" }}" pubdate>{{ article.meta }}</time></h2>
+      </hgroup>
+    </header>{% if article.byline %}
+    {{ article.byline }}{% endif %}
   </article>
   {% endfor %}
 </section>

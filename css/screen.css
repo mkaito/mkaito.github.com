@@ -103,13 +103,15 @@ article > header h1 {
     font-family: 'Hoefler Text', Georgia, 'Times New Roman', Times, serif;
     font-size: 1em;
     font-weight: lighter;
+    display: inline;
 }
 
-article > header h1 time {
+article > header h2 {
     text-transform: uppercase;
     font-size: 0.6em;
     letter-spacing: 0.1em;
     color: #444;
+    display: inline;
 }
 
 article > header h2 {	      /* bylines */
