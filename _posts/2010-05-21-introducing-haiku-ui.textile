@@ -1,7 +1,7 @@
 ---
 title: Introducing Haiku UI
 layout: post
-meta: May 21 2010 -- Arrecife
+meta: May 21 2010 &mdash; Arrecife
 byline: Minimalism & Information Overview
 ---
 

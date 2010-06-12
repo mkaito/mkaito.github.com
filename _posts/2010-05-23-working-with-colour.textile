@@ -1,7 +1,7 @@
 ---
 title: Working with colour
 byline: Three colours called Spark
-meta: May 23 2010 -- Arrecife
+meta: May 23 2010 &mdash; Arrecife
 layout: post
 published: true
 listening:
