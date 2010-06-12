@@ -1,6 +1,10 @@
 ---
 title: Death Cab for Cutie
 link: http://www.youtube.com/watch?v=XlRyk9gfkvw
-byline: "My better half told me to listen to this. It's actually really pleasant to listen to while working."
+byline: >
+	My better half told me to listen to this. It's actually really pleasant to listen to while working.
+	I've been writing all morning while having these guys sing in the background (not literally, I just
+	got a few MP3s playing in Sonata), and the state of mind is superb.
+	
 meta: June 12 2010 &mdash; Chilling to good music
 ---
