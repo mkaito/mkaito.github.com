@@ -71,7 +71,7 @@ div#content {
 }
 div#content p {
   color: #444;
-  padding: 0 0 0.5em;
+  padding: 0 0 0.3em;
 }
 
 #content > section { margin-bottom: 3em; }
@@ -103,13 +103,15 @@ article > header h1 {
     font-family: 'Hoefler Text', Georgia, 'Times New Roman', Times, serif;
     font-size: 1em;
     font-weight: lighter;
+    display: inline;
 }
 
-article > header h1 time {
+article > header h2 {
     text-transform: uppercase;
     font-size: 0.6em;
     letter-spacing: 0.1em;
     color: #444;
+    display: inline;
 }
 
 article > header h2 {	      /* bylines */
@@ -123,12 +125,8 @@ article > header h2 {	      /* bylines */
 
 section > article p {		/* Content text for links */
     margin-top: -0.2em;
-    margin-left: 1.5em;
-    font-size: 0.7em;
-}
-
-section > article p:first-line {
     margin-left: 2em;
+    font-size: 0.7em;
 }
 
 article img {
