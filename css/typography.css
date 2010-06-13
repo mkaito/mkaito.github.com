@@ -1,3 +1,23 @@
+/* Font face */
+/*
+HTTP://KERNEST.COM FONT DELIVERY SPONSORED BY:
+FontConf - The Unconference for Web Fonts &amp; @Font-Face. June 19, 2010. - http://fontconf.com 
+*/
+
+/* 
+Titillium Text 1 
+ 
+Foundry: Accademia Di Belle Arti Urbino, http://www.campivisivi.net/titillium/ 
+Contributors:  
+License: SIL Open Font License, http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=OFL 
+*/
+
+@font-face {
+	font-family: 'Titillium';
+	font-weight: 100;	
+	src: url('http://kernest.com/embed/titillium-text-1'), url('http://kernest.com/embed/titillium-text-1#titilliumtext1')  format('svg');
+}
+
 /* Base font */
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
