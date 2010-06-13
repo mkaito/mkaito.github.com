@@ -44,13 +44,13 @@ body {
 }
 
 #container > header h1 {            /*Name header with link back*/
-    font-family: 'Titillium';
+    font-family: 'Titillium', sans;
     font-weight: 100;
     line-height: 140%;
-    font-size: 2em;
+    font-size: 3em;
     position: absolute;
     right: -0.1em;
-    bottom: -0.1em;
+    bottom: -0.5em;
 }
 
 #container > header h1 a {
