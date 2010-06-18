@@ -3,9 +3,11 @@ layout: default
 ---
 <article>
   <header>
-    <h2>{{ page.title }}</h2>
-    {% if page.byline %}<p class="byline">{{ page.byline }}</p>{% endif %}
+    <hgroup>
+      <h1>{{ page.title }}</h1>
+      {% if page.byline %}<h2>{{ page.byline }}</h2>{% endif %}
+    </hgroup>
   </header>
   {{ content }}
-  <footer><p>{{ page.meta }}</p></footer>
+  <footer>{{ page.meta | textilize }}</footer>
 </article>

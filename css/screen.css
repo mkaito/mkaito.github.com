@@ -14,6 +14,8 @@ body {
     border: 1px solid #AFAFAF;
     /* background-color: white; */
     position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
 }
 
 #container {
@@ -22,6 +24,8 @@ body {
   padding: 1em 0 0 0;
   position: relative;
   background-color: #fff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 
 .shadow {
@@ -41,6 +45,10 @@ body {
   background: transparent url("/images/site/headers/bg_steampunk_03.jpg") no-repeat center bottom;
   background-size: cover;
   position: relative;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
 }
 
 #container > header h1 {            /*Name header with link back*/
@@ -76,20 +84,25 @@ div#content p {
 
 #content > section { margin-bottom: 3em; }
 
-/* Section headers */
-section > header {
+/* Section & article headers */
+section > header,
+#content > article  header {
     border-bottom: 1px solid #0b0f11;
     overflow: hidden;
     height: 1em;
     margin-bottom: 1em;
 }
 section > header h1,
-section > header h2 {
+section > header h2,
+#content > article header h1,
+#content > arcitle header h2 {
     font-size: 1em;
     color: #0b0f11;
 }
-section > header h1 { float: left; }
-section > header h2 {
+section > header h1,
+#content > article header h1 { float: left; }
+section > header h2,
+#content > article header h2 {
     float: right;
     color: #666;
     font-family: 'Lucida Grande', Geneva, Helvetica, sans-serif;
@@ -99,14 +112,14 @@ section > header h2 {
 }
 
 /* {{{ Articles */
-article > header h1 {
+section article > header h1 {
     font-family: 'Hoefler Text', Georgia, 'Times New Roman', Times, serif;
     font-size: 1em;
     font-weight: lighter;
     display: inline;
 }
 
-article > header h2 {
+section article > header h2 {
     text-transform: uppercase;
     font-size: 0.6em;
     letter-spacing: 0.1em;
@@ -114,7 +127,8 @@ article > header h2 {
     display: inline;
 }
 
-article > header h2 {	      /* bylines */
+section article > header h2,
+article > footer {	      /* bylines */
     color: #666;
     font-family: 'Lucida Grande', Geneva, Helvetica, sans-serif;
     font-size: 0.57em;
@@ -148,6 +162,16 @@ section ul#projects li {
 }
 section ul#projects li a { display: block; }
 /* }}} */
+
+/* {{{ Article Page */
+div#content > article header h1 {
+    font-family: 'Titillium', sans;
+    font-size: 1.2em;
+}
+
+div#content > article p {
+    margin-bottom: 1.2em;
+}
 
 /* {{{ Site footer */
 footer#footer {
