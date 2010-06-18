@@ -1,6 +1,9 @@
 // mkaito blog scripting stuff
-// Uses jquery 1.4.2
+// Uses Mootools 1.2.4
 
+////
+// Selects a random element from a predefined array of possible backgrounds
+// and constructs a css property with the result.
 var getRandomHeaderBG = function() {
     	var backgrounds = ['bg_steampunk_01.jpg',
 			   'bg_steampunk_02.jpg',
@@ -11,11 +14,11 @@ var getRandomHeaderBG = function() {
 	return randomHeaderBgPath;
 };
 
-$(document).ready(function(){
-    
-    // Set a random background image in the header
+////
+// main()
+window.addEvent('domready', function() {
+    // Set a random header image
     var randomHeader = getRandomHeaderBG();
-    $("#container > header").css("background-image", randomHeader);
-    console.debug("setRandomHeaderBG path: %s", randomHeader);
-
+    $("container").getElement("header").setStyle("background-image", randomHeader);
+    console.debug("Random Header Image: %s", randomHeader);
 });
