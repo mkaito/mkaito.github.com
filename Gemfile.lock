@@ -1,0 +1,39 @@
+--- 
+hash: 16ac19c5fb3bb003d140a17025a92d1706760d95
+sources: 
+- Rubygems: 
+    uri: http://gemcutter.org
+specs: 
+- RedCloth: 
+    version: 4.2.3
+- stemmer: 
+    version: 1.0.1
+- classifier: 
+    version: 1.3.1
+- directory_watcher: 
+    version: 1.3.2
+- liquid: 
+    version: 2.0.0
+- syntax: 
+    version: 1.0.0
+- maruku: 
+    version: 0.6.0
+- open4: 
+    version: 1.0.1
+- jekyll: 
+    version: 0.5.7
+- rdiscount: 
+    version: 1.6.5
+dependencies: 
+  RedCloth: 
+    version: ">= 0"
+    group: 
+    - :default
+  rdiscount: 
+    version: ">= 0"
+    group: 
+    - :default
+  jekyll: 
+    version: ">= 0"
+    group: 
+    - :default
