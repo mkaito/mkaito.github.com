@@ -1,0 +1,15 @@
+---
+title: Kernest and Namoroka
+meta: June 13 2010 -- Tinkering with @font-face
+byline: User agents matter
+layout: post
+---
+While trying out <code>@font-face</code> and [Kernest](http://kernest.com), I ran into a rather weird issue. Viewing the site in my default browser, Firefox, would reveal a rather unappealing site with generic sans-serif fonts, and a header saying "your browser doesn't support <code>@font-face</code>". Wait, what? My browser? I'm pretty confident that Firefox 3.5+ does indeed supoort <code>@font-face</code>... Let's try this on chrome...
+
+Opening the same site in Chrome revealed a very different site with beautiful fonts all over the place. Huh. I had already included a nifty font for the header on this very site by this time, from Kernest, which would show in all it's awesomeness in Chrome, but a generic default font in my trusty Firefox.
+
+Next step, was having a look at what the browser was getting fed through the external stylesheet from Kernest. As I was in Chrome, I typed the URL out and voilà, a load of comments telling us where the CSS came from, and a single <code>@font-face</code> declaration. Doesn't look wrong to me... Should work. So why.... wait! Let's open the same thing in Firefox, just in case. In awe, I saw Firefox getting a blank document from the stylesheet URL. The light bulb lit up! User-agent sniffing.
+
+Why does that matter? Well, I happen to use a development version of firefox, which isn't actually _branded_ as firefox, but uses the development codename: "Namoroka" (try to read it with a japanese accent, makes it sound much better). And obviously, my user-agent string was "Blah blah blah blah blah blah Namoroka/3.6.3". I guess nobody at Kernest thought about that. But the fix on my side was simple enough. Browsing to <code>about:config</code>, and creating a new string of name <code>general.useragent.override</code> with the desired value was good enough. I used [this](http://whatsmyuseragent.com/) handy site to find out my exact user agent, and simply replaced "Namoroka" with "Firefox". Lo and behold, things worked from this point onwards. True haxxor magic!
+
+On the other hand, I guess Namoroka could identify itself as Firefox rather safely, in my humble opinion. Also, 3.6.3 is not really a development version, it simply was never branded propperly in the Arch repos.

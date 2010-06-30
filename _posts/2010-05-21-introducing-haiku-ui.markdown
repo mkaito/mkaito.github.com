@@ -13,13 +13,14 @@ However, I think it's the developer's duty to provide as much flexibility as pos
 
 As the name suggests, I want to focus on simplicity, probably minimalism. The interface should be as simple as possible, hiding all the complexity from the user. Preferably, a simple settings dialog should be used instead of using the cryptic frame and title bar stuff.
 
-The whole thing is an idea I'm mentally fleshing out right now, but I've already set up the "repository":http://github.com/mkaito/haiku-ui on github, and you can track progress there.
+The whole thing is an idea I'm mentally fleshing out right now, but I've already set up the [repository](http://github.com/mkaito/haiku-ui) 
+on github, and you can track progress there.
 
 For now, I have made a pretty compelling threat meter window, with included auto attack bars, which is meant to be stuck below or above the casting bar, for which I have made a visually fitting mod as well.
 
-!/images/posts/introducing-haiku-threatbar.jpg!
+![Thread bar](/images/posts/introducing-haiku-threatbar.jpg) 
 
-p(caption). Thread window with auto-attack timer, with secondary threat visible.
+Thread window with auto-attack timer, with secondary threat visible.
 
 Right now, I'm still thinking of a visual style for windows, but I'm really fond of Dragowulf's Vex skin, which is simple and slick. I'll probably come up with something similar. I'm also looking at making several UI elements look more "plain" instead of so much pseudo 3D, which should reduce visual clutter a lot.
 
