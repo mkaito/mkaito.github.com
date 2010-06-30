@@ -2,4 +2,4 @@ source :gemcutter
 
 gem 'RedCloth'
 gem 'rdiscount'
-gem 'jekyll'
+gem 'jekyll', '0.6.2'

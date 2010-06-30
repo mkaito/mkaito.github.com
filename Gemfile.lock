@@ -1,5 +1,5 @@
 --- 
-hash: 16ac19c5fb3bb003d140a17025a92d1706760d95
+hash: 45105def538e82d0012b1817c469a3d54e2b6783
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
@@ -18,10 +18,8 @@ specs:
     version: 1.0.0
 - maruku: 
     version: 0.6.0
-- open4: 
-    version: 1.0.1
 - jekyll: 
-    version: 0.5.7
+    version: 0.6.2
 - rdiscount: 
     version: 1.6.5
 dependencies: 
@@ -34,6 +32,6 @@ dependencies:
     group: 
     - :default
   jekyll: 
-    version: ">= 0"
+    version: = 0.6.2
     group: 
     - :default
