@@ -174,15 +174,15 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.26'
-  FINGERPRINT  = "45105def538e82d0012b1817c469a3d54e2b6783"
+  FINGERPRINT  = "9a1232272be1c418f1e3f8619cfcff5295d69df7"
   HOME         = '/home/chris/.bundle/ruby/1.9.1/bundler'
-  AUTOREQUIRES = {:default=>[["RedCloth", false], ["jekyll", false], ["rdiscount", false]]}
+  AUTOREQUIRES = {:default=>[["RedCloth", false], ["liquid", false], ["jekyll", false], ["rdiscount", false]]}
   SPECS        = [
         {:name=>"RedCloth", :load_paths=>["/usr/lib/ruby/gems/1.9.1/gems/RedCloth-4.2.3/lib", "/usr/lib/ruby/gems/1.9.1/gems/RedCloth-4.2.3/ext", "/usr/lib/ruby/gems/1.9.1/gems/RedCloth-4.2.3/lib/case_sensitive_require"], :loaded_from=>"/usr/lib/ruby/gems/1.9.1/specifications/RedCloth-4.2.3.gemspec"},
         {:name=>"stemmer", :load_paths=>["/usr/lib/ruby/gems/1.9.1/gems/stemmer-1.0.1/lib"], :loaded_from=>"/usr/lib/ruby/gems/1.9.1/specifications/stemmer-1.0.1.gemspec"},
         {:name=>"classifier", :load_paths=>["/usr/lib/ruby/gems/1.9.1/gems/classifier-1.3.1/lib"], :loaded_from=>"/usr/lib/ruby/gems/1.9.1/specifications/classifier-1.3.1.gemspec"},
         {:name=>"directory_watcher", :load_paths=>["/usr/lib/ruby/gems/1.9.1/gems/directory_watcher-1.3.2/lib"], :loaded_from=>"/usr/lib/ruby/gems/1.9.1/specifications/directory_watcher-1.3.2.gemspec"},
-        {:name=>"liquid", :load_paths=>["/usr/lib/ruby/gems/1.9.1/gems/liquid-2.0.0/lib"], :loaded_from=>"/usr/lib/ruby/gems/1.9.1/specifications/liquid-2.0.0.gemspec"},
+        {:name=>"liquid", :load_paths=>["/usr/lib/ruby/gems/1.9.1/gems/liquid-2.1/lib"], :loaded_from=>"/usr/lib/ruby/gems/1.9.1/specifications/liquid-2.1.gemspec"},
         {:name=>"syntax", :load_paths=>["/usr/lib/ruby/gems/1.9.1/gems/syntax-1.0.0/lib"], :loaded_from=>"/usr/lib/ruby/gems/1.9.1/specifications/syntax-1.0.0.gemspec"},
         {:name=>"maruku", :load_paths=>["/usr/lib/ruby/gems/1.9.1/gems/maruku-0.6.0/lib"], :loaded_from=>"/usr/lib/ruby/gems/1.9.1/specifications/maruku-0.6.0.gemspec"},
         {:name=>"jekyll", :load_paths=>["/home/chris/.bundle/ruby/1.9.1/gems/jekyll-0.6.2/lib"], :loaded_from=>"/home/chris/.bundle/ruby/1.9.1/specifications/jekyll-0.6.2.gemspec"},

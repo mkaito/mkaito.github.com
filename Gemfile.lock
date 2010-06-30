@@ -1,5 +1,5 @@
 --- 
-hash: 45105def538e82d0012b1817c469a3d54e2b6783
+hash: 9a1232272be1c418f1e3f8619cfcff5295d69df7
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
@@ -13,7 +13,7 @@ specs:
 - directory_watcher: 
     version: 1.3.2
 - liquid: 
-    version: 2.0.0
+    version: "2.1"
 - syntax: 
     version: 1.0.0
 - maruku: 
@@ -29,6 +29,10 @@ dependencies:
     - :default
   rdiscount: 
     version: ">= 0"
+    group: 
+    - :default
+  liquid: 
+    version: = 2.1
     group: 
     - :default
   jekyll: 
