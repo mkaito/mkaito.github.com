@@ -1,17 +1,19 @@
 /* Base font */
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Lucida Grande', Geneva, Helvetica, sans-serif;
   text-decoration: none;
   word-spacing: 0.1em;
   text-align: left;
   letter-spacing: 0;
   line-height: 1.3em;
   font-size: 16px;
+  color: #444;
 }
 
 /* Headers */
 h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Titillium', sans;
+  color: #0B0F11;
 }
 
 h1 { font-size: 2em; }
@@ -35,5 +37,12 @@ a:hover {
 
 p {
     font-size:0.875em;
-    margin-bottom: 2em;
+    margin-bottom: 1.2em;
 }
+
+p +p { text-indent: 1em; }
+
+section p,
+section li,
+article p,
+article li { font-family: Georgia, "Times New Roman", Times, serif; }

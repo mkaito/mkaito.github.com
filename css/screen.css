@@ -4,7 +4,6 @@
 /* {{{ Global styles */
 body {
     background: #0B0F11 url('/images/site/stripe.png') repeat top left;
-    color: #0B0F11;
 }
 
 #border {
@@ -19,8 +18,8 @@ body {
 }
 
 #container {
-  margin: 2em auto;
-  width: 90%;
+  margin: 1em auto;
+  width: 95%;
   padding: 1em 0 0 0;
   position: relative;
   background-color: #fff;
@@ -38,7 +37,7 @@ body {
 #container > header { 
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
-  margin: 0 1em;
+  margin: 0 2em;
   height: 13em;
   color: #222;
   overflow: hidden;
@@ -52,7 +51,6 @@ body {
 }
 
 #container > header h1 {            /*Name header with link back*/
-    font-family: 'Titillium', sans;
     font-weight: 100;
     line-height: 140%;
     font-size: 3em;
@@ -74,12 +72,7 @@ body {
 
 /* {{{ Content */
 div#content {
-    margin: 3.4em 1em;
-    overflow: hidden;
-}
-div#content p {
-  color: #444;
-  padding: 0 0 0.3em;
+    margin: 3.4em 2em;
 }
 
 #content > section { margin-bottom: 3em; }
@@ -89,7 +82,7 @@ section > header,
 #content > article  header {
     border-bottom: 1px solid #0b0f11;
     overflow: hidden;
-    height: 1em;
+    height: 1.4em;
     margin-bottom: 1em;
 }
 section > header h1,
@@ -100,7 +93,7 @@ section > header h2,
     color: #0b0f11;
 }
 section > header h1,
-#content > article header h1 { float: left; }
+#content > article header h1 { float: left; font-size: 1.2em; }
 section > header h2,
 #content > article header h2 {
     float: right;
@@ -109,13 +102,13 @@ section > header h2,
     font-size: 0.57em;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    margin: 0;
 }
 
 /* {{{ Articles */
 section article > header h1 {
-    font-family: 'Hoefler Text', Georgia, 'Times New Roman', Times, serif;
     font-size: 1em;
-    font-weight: lighter;
+    font-weight: bold;
     display: inline;
 }
 
@@ -129,20 +122,25 @@ section article > header h2 {
 
 section article > header h2,
 article > footer {	      /* bylines */
-    color: #666;
-    font-family: 'Lucida Grande', Geneva, Helvetica, sans-serif;
-    font-size: 0.57em;
+    font-size: 0.6em;
     letter-spacing: 0.2em;
     padding: 0;
     text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Lucida Grande',Geneva,Helvetica,sans-serif;
 }
 
 section > article p {		/* Content text for links */
     margin-top: -0.2em;
-    margin-left: 2em;
-    font-size: 0.7em;
+    margin-left: 1.8em;
+    font-size: 0.75em;
+    letter-spacing: 0.07em;
+    color: #666;
 }
 
+/* {{{ Article contents */
 article img {
     margin: 0.3em 2em 0 0;
 }
@@ -151,6 +149,22 @@ article img + p { 		/* img caption */
     font-size: 0.7em;
     margin: -1.3em 0 1.2em 0;
 }
+
+article h2, article h3, article h4 { margin: 1.5em 0 0.5em 0; }
+article h2 { font-size: 1.1em; }
+article h3, article h4 { font-size: 1em; }
+
+article ul {
+    list-style: disc outside;
+    margin: 1em 0;
+}
+article ul ul {
+    margin: 0 0 0 1em;
+    list-style-type: circle;
+}
+
+article footer p { color: #0B0F11; }
+/* }}} */
 /* }}} */
 
 /* {{{ Code section */
@@ -165,12 +179,8 @@ section ul#projects li a { display: block; }
 
 /* {{{ Article Page */
 div#content > article header h1 {
-    font-family: 'Titillium', sans;
     font-size: 1.2em;
-}
-
-div#content > article p {
-    margin-bottom: 1.2em;
+    margin: 0;
 }
 
 /* {{{ Site footer */
