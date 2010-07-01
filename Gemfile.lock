@@ -1,5 +1,5 @@
 --- 
-hash: 9a1232272be1c418f1e3f8619cfcff5295d69df7
+hash: ffb0b738e15b83220ff24c4d798ba869ca9d7865
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
@@ -20,14 +20,8 @@ specs:
     version: 0.6.0
 - jekyll: 
     version: 0.6.2
-- rdiscount: 
-    version: 1.6.5
 dependencies: 
   RedCloth: 
-    version: ">= 0"
-    group: 
-    - :default
-  rdiscount: 
     version: ">= 0"
     group: 
     - :default
