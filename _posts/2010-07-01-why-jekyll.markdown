@@ -13,7 +13,8 @@ elsewhere. I ended up writing more about the "why" than the "how" of
 keeping a blog with Jekyll. After reading through it a few times, I
 thought it might be worth publishing anyway. I also want to write
 about the technicalities behind my blog, since I have quite a few home
-grown tinkerings to share.
+grown tinkerings to share, but that will have to wait for another
+article.
 
 ## What's wrong with blogging?
 
