@@ -150,18 +150,40 @@ article img + p { 		/* img caption */
     margin: -1.3em 0 1.2em 0;
 }
 
+header + h1 { display: none; }
+article div.maruku_toc {
+    float: right;
+    margin: 1.5em 0 1em 1em; }
+article div.maruku_toc ul {
+    border-right: 0.1em solid #666;
+    padding-right: 1em; }
+article div.maruku_toc ul li {
+    margin: 0.5em 0; }
+
 article h2, article h3, article h4 { margin: 1.5em 0 0.5em 0; }
 article h2 { font-size: 1.1em; }
 article h3, article h4 { font-size: 1em; }
 
+article blockquote {
+    margin: 1em 3em 1em -1em;
+    color: #666;
+    border-left: 0.1em solid #666;
+    padding-left: 1em; }
+article blockquote span.source {
+    text-align: right; 
+    display: block; }
+article blockquote span.source:before {
+    content: "— "; }
+
+article code {
+    font-family: Courier, monospace; }
+
 article ul {
     list-style: disc outside;
-    margin: 1em 0;
-}
+    margin: 1em 0; }
 article ul ul {
     margin: 0 0 0 1em;
-    list-style-type: circle;
-}
+    list-style-type: circle; }
 
 article footer p { color: #0B0F11; }
 /* }}} */
@@ -172,20 +194,17 @@ article footer p { color: #0B0F11; }
 section ul#projects li {
   color: #444;
   font-size: 0.9em;
-  margin: 12px 0 6px;
-}
+  margin: 12px 0 6px; }
 section ul#projects li a { display: block; }
 /* }}} */
 
 /* {{{ Article Page */
 div#content > article header h1 {
     font-size: 1.2em;
-    margin: 0;
-}
+    margin: 0; }
 
 /* {{{ Site footer */
 footer#footer {
     font-size: 0.7em;
-    text-align: center;
-}
+    text-align: center; }
 /* }}} */
