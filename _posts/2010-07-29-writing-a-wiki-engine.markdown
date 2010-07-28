@@ -1,9 +1,9 @@
 ---
 title: Writing a Wiki engine
-meta: July 02 2010 &mdash; Thinking in code
+meta: July 29 2010 &mdash; Thinking in code
 byline: Simple things, rethought.
 layout: post
-published: false
+published: true
 ---
 
 ## Why a wiki?
@@ -27,18 +27,20 @@ from conception to deployment. There are certain ideas and concepts
 you need to be familiar with, if you are to call yourself an
 application developer, and I'm hoping to send across the right ideas
 to get you started. As the saying goes, I can only show you the path,
-but you have to walk it yourself.
+you'll have to walk it yourself.
 
 I intend not to write about specific tools or technologies, beside the
 times I use them as examples of the ideas I try to bring
 across. However, I understand that some more examples might be needed,
 like real-world examples of what I'm writing about. Be aware, that
 each piece of software I write about, is a piece of software I have
-actually written, and what you read is just the line of thought I
-followed prior to sitting down at the computer and booting Emacs. This
-means, that I'm already considering a follow-up series on the specific
-technology choices behind my software. Don't expect tutorials on how
-to do what I did, since I don't like writing tutorials, but it should
+actually written, or am in the process of writing, and what you read
+is just the line of thought I followed prior to sitting down at the
+computer and booting Emacs. This means, that I'm already considering a
+follow-up series on the specific technology choices behind my
+software. Don't expect tutorials on how to do what I did, since I
+don't like writing "click here, enter this" tutorials (and teaching
+someone to fish is way better than giving him a fish), but it should
 give you enough background to follow
 [my code](http://github.com/mkaito) on Git Hub.
 
@@ -70,8 +72,9 @@ linking articles in some fashion. HTML provides for this with
 hyperlinks, so don't worry, you don't have to reinvent the wheel on
 this one. Third, the user doesn't need to know the technicalities that
 enable the wiki. She shouldn't need to learn html, or wonder why the
-file upload isn't working. This is probably the most fundamental idea
-behind good application development. Things need to work and be
+file upload isn't working, although providing "extra features" for
+tech-savvy users is a bonus. This is probably the most fundamental
+idea behind good application development. Things need to work and be
 intuitive. You need to build on existing knowledge and move on from
 there. Don't make the user read a three-tome manual to use your
 app. It's your duty as developer to make things work the way the user
@@ -89,7 +92,7 @@ nothing. Anyone that has used a computer for a week knows what a
 folder is and how it's used. We're all used to see hierarchy all over
 the world, from monarchy to the army, from your work place to your
 family. There's absolutely nothing wrong with building on this
-knowledge.
+knowledge, and exploiting it for a better user experience.
 
 I've mentioned my dislike for java script driven WYSIWYG editors that
 look, behave and weight about as much as MS Word. How about LaTeX? Was
@@ -101,22 +104,27 @@ the more powerful of the two, at the cost of being a tad more
 complex. But Markdown requires hardly any *learning*. As John Gruber
 would put it, if you've ever read or written plain-text email, you
 probably already know Markdown. You write stuff, and it turns into
-beautiful HTML.
+beautiful HTML. And if you've never seen some plain text email, it
+looks just like html email, but we use typographic symbols instead of
+bright orange to denote things. Have a look at the link above, it's
+really simple. I write my articles in markdown, because it's so simple
+it doesn't distract me from what I'm writing. I've even caught myself
+taking notes in markdown *with a pen and paper*.
 
 Most likely, users will want to add some sort of graphic content to
 spice their texts up. How would we handle this? I've seen most big
 bulletin board software have an "attach" feature, which is used to
 upload several allowed file types and keep them with the posts they
 were uploaded for. But a wiki is about sharing. I'd rather have images
-stored in a central place, ready to be used by anyone that would need
-the same image. But we'll need an easy way to upload, find and insert
-images into the content. Probably categorize them, or tag them. Some
-search dialog contraption comes to mind, where the user is able to
-refine her search by tags or categories, and ultimately clicking on an
-image will insert the apropiate link into the content area. Sounds
-like a little bit of java script is going to be required, and a search
-back end to support it. Nothing too complex, it should be fast and
-responsive.
+stored in a central place, indexed and ready to be used by anyone that
+would need the same image. But we'll need an easy way to upload, find
+and insert images into the content. Probably categorize them, or tag
+them. Some search dialog contraption comes to mind, where the user is
+able to refine her search by tags or categories, and ultimately
+clicking on an image will insert the apropiate link into the content
+area. Sounds like a little bit of java script is going to be required,
+and a search back end to support it. Nothing too complex, it should be
+fast and responsive.
 
 Don't some of the new NoSQL DBs support "attachments" for records?
 How do image uploads stored straight in the database sound? If we can
@@ -124,7 +132,11 @@ index them by metadata, this would be almost perfect. On the other
 hand, we could keep the metadata in the database and retrieve the
 content from disk on demand. Sounds about as good to me. I'm more
 inclined to trust my good old file system anyway. And it's easier to
-back up.
+back up than a database. But then, separating related content is not
+such a good idea. Keeping the files together with the data would
+simplify things greatly, including backups. You still have to backup
+the DB to keep the meta data, after all, so why not reduce it to a
+single step?
 
 ## Connect the dots
 
@@ -199,3 +211,13 @@ how things should be distributed? Thankfully, the link method outlined
 above is easy enough to quickly create categorical or topical index
 pages by hand. Let the humans do the thinking, let the computers do
 the work. Not the other way around, or any other way.
+
+## Wrapping it up
+
+I've already spent some time working on this project, I've dubbed
+"Piki" (guess why *=P*), and it's steadily moving along. Once it is
+production ready, I'll share the code and the choices that led me to
+the specific technologies used in the process. The whole project is
+being written from the start to serve as an educational example, so
+there will be lots of comments and no magic hackery going on. Stay
+tuned!
