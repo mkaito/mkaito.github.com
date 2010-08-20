@@ -20,7 +20,7 @@ layout: nil
    <link href="{% unless post.link %}http://mkaito.github.com{{ post.url }}{% else %}{{ post.link }}{% endunless %}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>http://mkaito.github.com{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <content type="html">{% unless post.link  %}{{ post.content | xml_escape }}{% else  %}{{ post.byline | xml_escape  }}{% endunless  %}</content>
  </entry>
  {% endfor %}
  
