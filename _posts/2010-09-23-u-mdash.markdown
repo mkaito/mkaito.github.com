@@ -1,0 +1,6 @@
+---
+title: "ū—: The ultimate distraction-free editor"
+meta: septiembre 23 2010 &mdash; About to sleep
+byline: I'm seriously dumping Emacs for this!
+link: http://www.kungfugrippe.com/post/1169153343/only-you
+---
