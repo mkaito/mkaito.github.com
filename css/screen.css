@@ -51,12 +51,13 @@ body {
 }
 
 #container > header h1 {            /*Name header with link back*/
+    font-family: 'Waiting for the Sunrise', arial, serif;
     font-weight: 100;
     line-height: 140%;
     font-size: 3em;
     position: absolute;
-    right: -0.1em;
-    bottom: -0.5em;
+    right: -0.05em;
+    bottom: -0.35em;
 }
 
 #container > header h1 a {
