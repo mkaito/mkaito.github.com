@@ -43,6 +43,6 @@ window.addEvent('domready', function() {
     // console.debug("Random Header Image: %s", randomHeader);
 
     // Generating a toc for articles
-    insertTOC();
+    // insertTOC();
 });
 
