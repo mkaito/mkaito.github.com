@@ -13,10 +13,10 @@ title: Index
   <article>
     <header>
       <hgroup>
-	<h1>
-	  {% if article.link %}&#x2764;{% else %}&#9733;{% endif %} <a href="{% if article.link  %}{{ article.link }}{% else %}{{ article.url }}{% endif %}" title="{{ article.title }}">{{ article.title }}</a>
-	</h1>
-	<h2>&raquo; <time datetime="{{ article.date | date_to_xmlschema }}" pubdate>{{ article.meta }}</time></h2>
+  <h1>
+    {% if article.link %}&#x2764;{% else %}&#9733;{% endif %} <a href="{% if article.link  %}{{ article.link }}{% else %}{{ article.url }}{% endif %}" title="{{ article.title }}">{{ article.title }}</a>
+  </h1>
+  <h2>&raquo; <time datetime="{{ article.date | date_to_xmlschema }}" pubdate>{{ article.meta }}</time></h2>
       </hgroup>
     </header>{% if article.byline %}
     {{ article.byline | textilize }}{% endif %}
@@ -37,4 +37,3 @@ title: Index
     <li><a href="http://github.com/mkaito/dotfiles/">&raquo; personal/dotfiles</a>My configuration files for a host of software, including Emacs, (G)vim, awesome window manager, zsh, etc...</li>
   </ul>
 </section>
-

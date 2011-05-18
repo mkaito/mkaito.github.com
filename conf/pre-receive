@@ -1,0 +1,61 @@
+#!/bin/bash
+
+while read old_sha1 new_sha1 refname anothervalue ; do
+  updated=`git show --pretty="format:" --name-only $new_sha1`
+
+  # Check for a new post-receive hook and update if necesary.
+  echo $updated | grep 'conf/post-receive' > /dev/null
+  if [[ "$?" -eq "0" ]]; then
+    echo "Updating post-receive hook... "
+    git show ${new_sha1}:conf/post-receive > /tmp/post-receive
+
+    echo "Checking hook file for syntax errors..."
+    ruby -c /tmp/post-receive && mv -f /tmp/post-receive hooks/post-receive && chmod +x hooks/post-receive && echo "Done."
+
+    rm -f /tmp/post-receive
+  fi
+
+  echo $updated | grep 'conf/pre-receive' > /dev/null
+  if [[ "$?" -eq "0" ]]; then
+    echo "Updating pre-receive hook... "
+    git show ${new_sha1}:conf/pre-receive > /tmp/pre-receive
+
+    echo "Checking hook file for syntax errors..."
+    bash -n /tmp/pre-receive && mv -f /tmp/pre-receive hooks/pre-receive && chmod +x hooks/pre-receive && echo "Done."
+
+    rm -f /tmp/pre-receive
+  fi
+
+  echo $updated | grep 'conf/unicorn.sh' > /dev/null
+  if [[ "$?" -eq "0" ]]; then
+    echo "Updating Unicorn init script... "
+    git show ${new_sha1}:conf/unicorn.sh > /tmp/unicorn
+
+    echo "Checking script file for syntax errors..."
+    bash -n /tmp/unicorn && sudo mv -f /tmp/unicorn /etc/rc.d/unicorn && chmod +x /etc/rc.d/unicorn && echo "Done."
+
+    rm -f /tmp/unicorn
+  fi
+
+  # Syntax check any committed ruby, haml, and sass files.
+  for fname in ${updated}; do
+    case ${fname##*.} in
+      rb)
+        cmd="ruby -c"
+        ;;
+      haml)
+        cmd="haml -c"
+        ;;
+      sass|scss)
+        cmd="sass -c"
+        ;;
+    esac
+
+    if [[ -n "${cmd}" ]]; then
+      git show ${new_sha1}:${fname} | ${cmd}
+      if [[ "$?" -ne "0" ]]; then exit 1; fi
+    fi
+  done
+done
+
+exit $?

@@ -1,0 +1,7 @@
+---
+title: This blog post is a new thing
+meta: August 27 2010 &mdash;
+byline: 
+layout: post
+published: false
+---

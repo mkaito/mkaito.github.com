@@ -1,6 +1,6 @@
 source :gemcutter
 
 gem 'RedCloth'
-#gem 'rdiscount'
+gem 'rdiscount'
 gem 'liquid'
-gem 'jekyll'
+gem 'jekyll', "0.10.0", :path => "~/dev/jekyll"

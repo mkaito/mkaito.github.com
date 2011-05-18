@@ -1,6 +1,7 @@
 /* Base font */
 body {
-  font-family: 'Lucida Grande', Geneva, Helvetica, sans-serif;
+  font-family: 'Open Sans', arial, serif;
+  font-weight: light;
   text-decoration: none;
   word-spacing: 0.1em;
   text-align: left;
@@ -12,7 +13,8 @@ body {
 
 /* Headers */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Droid Serif', sans;
+  /* font-family: 'Droid Serif', sans; */
+  font-weight: regular;
   color: #0B0F11;
 }
 

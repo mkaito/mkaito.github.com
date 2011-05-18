@@ -99,47 +99,52 @@ section > header h2,
 #content > article header h2 {
     float: right;
     color: #666;
-    font-family: 'Lucida Grande', Geneva, Helvetica, sans-serif;
+    /* font-family: 'Lucida Grande', Geneva, Helvetica, sans-serif; */
     font-size: 0.57em;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     margin: 0;
 }
 
-/* {{{ Articles */
+/* {{{ Article list */
 section article > header h1 {
-    font-size: 1em;
-    font-weight: bold;
-    display: inline;
+  font-size: 1.2em;
 }
-
-section article > header h2 {
-    text-transform: uppercase;
-    font-size: 0.6em;
-    letter-spacing: 0.1em;
-    color: #444;
-    display: inline;
-}
-
-section article > header h2,
-article > footer {	      /* bylines */
-    font-size: 0.6em;
-    letter-spacing: 0.2em;
-    padding: 0;
-    text-transform: uppercase;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-family: 'Lucida Grande',Geneva,Helvetica,sans-serif;
-}
-
-section > article p {		/* Content text for links */
-    margin-top: -0.2em;
-    margin-left: 1.8em;
-    font-size: 0.75em;
-    letter-spacing: 0.07em;
-    color: #666;
-}
+/* {{{ Articles */
+/* section article > header hgroup { overflow: auto; } */
+/* section article > header h1 { */
+/*     font-size: 1.2em; */
+/*     font-weight: bold; */
+/*     display: inline; */
+/* } */
+/*  */
+/* section article > header h2 { */
+/*     text-transform: uppercase; */
+/*     font-size: 0.6em; */
+/*     letter-spacing: 0.1em; */
+/*     color: #444; */
+/*     display: inline; */
+/* } */
+/*  */
+/* section article > header h2, */
+/* article > footer {	      /* bylines */ */
+/*     font-size: 0.6em; */
+/*     letter-spacing: 0.2em; */
+/*     padding: 0; */
+/*     text-transform: uppercase; */
+/*     white-space: nowrap; */
+/*     overflow: hidden; */
+/*     text-overflow: ellipsis; */
+/*     /* font-family: 'Lucida Grande',Geneva,Helvetica,sans-serif; */ */
+/* } */
+/*  */
+/* section > article p {		/* Content text for links */ */
+/*     margin-top: -0.2em; */
+/*     margin-left: 1.8em; */
+/*     font-size: 0.75em; */
+/*     letter-spacing: 0.07em; */
+/*     color: #666; */
+/* } */
 
 /* {{{ Article contents */
 article img {

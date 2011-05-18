@@ -9,6 +9,7 @@
     <link href="/atom.xml" rel="alternate" title="Michishige Kaito" type="application/atom+xml" />
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:light,regular,bold' rel='stylesheet' type='text/css'>
 
     <!--[if IE]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,24 +27,25 @@
     <div id="border">
       <div id="container">
 
-	<header>
+        <header>
             <h1><a href="/" rel="home">Michishige Kaito</a></h1>
         </header>
-        
+
         <div id="content">
           {{ content }}
         </div>
-        
+
         <footer id="footer">
-	  Don&#8217;t steal my stuff, it&#8217;s bad karma. If the site looks weird,
-	  get a proper browser. <a href="http://kernest.com">Fonts by Kernest</a>
-	</footer>
-	
+          Don&#8217;t steal my stuff, it&#8217;s bad karma. If the site looks weird,
+          get a proper browser. {% comment %}<a href="http://kernest.com">Fonts by Kernest</a>{% endcomment %}
+        </footer>
+
       </div> <!-- #container -->
     </div>   <!-- #border -->
-    
-    <!-- BEGIN: SeeVolution --><img width=0 height=0 src="https://c.svlu.net/pixel.aspx"/><script type="text/javascript" src="https://c.svlu.net/JInitScript.js"></script><!-- END: SeeVolution  -->
-    <!-- BEGIN: SeeVolution --><script>svluArea="Conversion";</script><img width=0 height=0 src="https://c.svlu.net/pixel.aspx" /><script type="text/javascript" src="https://c.svlu.net/JInitScript.js"></script><!-- END: SeeVolution -->
+
+    {% comment %}<!-- BEGIN: SeeVolution --><img width=0 height=0 src="https://c.svlu.net/pixel.aspx"/><script type="text/javascript" src="https://c.svlu.net/JInitScript.js"></script><!-- END: SeeVolution  -->{% endcomment %}
+    {% comment %}<!-- BEGIN: SeeVolution --><script>svluArea="Conversion";</script><img width=0 height=0 src="https://c.svlu.net/pixel.aspx" />{% endcomment %}
+      {% comment %}<script type="text/javascript" src="https://c.svlu.net/JInitScript.js"></script><!-- END: SeeVolution -->{% endcomment %}
 
     <!-- http://mootools.net/ -->
     <script src="/js/mootools.js"></script>
