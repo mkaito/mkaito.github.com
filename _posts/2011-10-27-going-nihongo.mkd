@@ -1,0 +1,52 @@
+---
+title: Nihongo!
+byline: A detour on the path of weeaboism
+meta: Smoking some 漢字
+layout: post
+published: true
+---
+No, actually I'm not a weeabo. Just a guy who loves Japanese culture. It's been a while since I fell in love with Japan. I think it started with anime when I was eight years old. Eventually, manga fell into my world, I started learning about the land of the rising sun, it's people and their habits, and something ticked inside me. It was all so different, so beautiful, so fascinating. I just had to know more about all of this.
+
+Now, after years of learning different things about Japan, I have taken the step to acquire it's language. I knew it wasn't going to be easy, but that just makes it more interesting, doesn't it?
+
+Traditional language learning will usually involve parroting silly phrases like "good morning, my name is Jack", rote learning, and getting you to talk as soon as possible. It also involves retarded classmates, and teachers who speak the language so-so, and pretend to charge astronomic fees for their wisdom. Needless to say, I've taken my own path to language acquisition. Considering that Japanese will be the fourth language I obtain fluidity in (assuming I get there), I'd have to say that My Approach tends to work pretty nicely.
+
+Drafting this study plan took me something like a year. I dabbled between many online resources, read a lot of bulletin boards, and blogs, and books, and eventually gathered a mental picture of the path to Nihongo Enlightenment (hopefully). I'm nowhere near done with this plan, so bear in mind that all of this might just be wishful thinking. I, however, plan to stick to my path until proven wrong.
+
+The actual plan is rather simple: Do The Kanji, basic grammar, basic vocab, and then grammar &amp; vocab together until I either gain fluency of throw the towel.
+
+This post shall serve the purpose of documenting my intentions of studying Japanese. If you are intending to pick up self-study of Japanese, and are not sure where to start, maybe you'll find something useful, which would make me very happy.
+
+## Heisig
+
+After trying several different methods of kanji training, I decided to entrust my kanji-fu to Dr Heisig, and bought all the books off Amazon. There are heaps over heaps of negative reviews of this series on the net. If the name sounds even just vaguely familiar, you've read the haters. Their problem is usually that it won't teach you any actual Japanese along with the kanji, and that this is a waste of time, because you "should learn it all at once". Well, let's just say I consider this a big truck load of male cow excrement. There's absolutely nothing wrong with learning in steps. Baby steps, if you have to. The only important thing is eventually getting there, and having fun along the way. And trying to deal with twelve things at once doesn't sound fun to me.
+
+The Heisig method, outlined in his Remembering the Kanji series, RTK for short, divides the kanji hurdle in two steps. While with traditional kanji study, you will tackle the writing, meaning, and reading all at once, Heisig splits the "reading" part off into a second book, and has you focus on just the writing and meaning of characters to begin with. The second book will then teach you the different Chinese readings that go with each character through a set of systematic rules, as well as give you a bunch of sample words for each reading, which serves the secondary purpose of bootstrapping your vocabulary.
+
+With the myth out of the way, let me say that Heisig's method is exactly what it says on the tin: A complete course on how not to forget the meaning and writing of Japanese characters. Nothing more, nothing less. And considering 90% of Japanese language students (yes, I did in fact pull that number out of you-know-where) consider the kanji to be the biggest hurdle to fluency, this is no small feat. You don't even need to finish the first book to start seeing the effects. After a couple hundred characters, and assuming you deal with any sort of Japanese material at all, you will start recognizing kanji in the wild. And you will know what they mean, even if you won't be able to say the Japanese word to it aloud. Heisig turns kanji from "oh my gosh, that's a lot of strokes at once" to "wait, I've seen that before", and that's just fucking awesome, if you will pardon my language.
+
+The idea is that once you are done with the writing and meaning part, you move onto the reading part, which will teach you the main Chinese readings of all the characters you just learned to write and interpret. However, I'd strongly advice against this, as this *is* a bit of a waste of time, at least to begin with. You can always go back to RTK2 after you have some proper, real Japanese under your belt, and systematize your reading knowledge.
+
+Once you're done with stroke-contraption-recognition, it's time to move onto Real Japanese You Can Actually Use: Grammar &amp; Vocab.
+
+## Tae Kim & A Dictionary of Japanese Grammar
+
+The de facto online resource when it comes to Japanese grammar is, of course, [Tae Kim's Guide to Learning Japanese](http://www.guidetojapanese.org/). While it doesn't tackle any really advanced topics, it will get you a very long way to understanding actual Japanese, and throw in a little vocab on the side. It may not be a very gentle introduction, as it is rather dense, but it's absolutely possible to pick up basic grammar with nothing but this guide. It's also a very good and searchable grammar reference, once you're done with it.
+
+I was mainly considering sticking to Tae Kim, the Genki series, and the <abbr title="A Dictionary of Japanese Grammar">ADoJG</abbr> series. However, the anti-geek in me (a rather small part of my being) insisted that I acquired a physical resource for grammar acquisition. There is just something special about kicking back on the couch with a real book in your hands that no electronic device so far has managed to emulate for me. Genki is a text book that teaches silly little sentences and expects you to pick up grammar points from them. I hear this works pretty well for most people, but I'm a lot more comfortable with the dictionary approach, where each point is explained to comprehensively and densely. And that's exactly what <abbr title="A Dictionary of Japanese Grammar">ADoJG</abbr> does. It also ships a good amount of example sentences, so it's not like you're left on your own figuring how to put all that grammar to use. This series is also the most expensive of the three contenders, but I believe it's worth the extra pennies.
+
+## Vocabulary sources
+
+While grammar is very structured in nature, vocabulary is more of an organic thing. There are lots of "most used words" lists out there, but I'm pretty sure the researchers didn't research my little slice of the world. My approach to vocabulary is rather simple: just pick it up along the way. You *will* learn a good bunch of words before you ever come to the vocab-focused stage of your learning. Most basics should be covered by now, like colours, numbers, days of the week, etc.
+
+That's about as far as it goes for sensible structured vocab acquisition. Once you're past the evident basics, there are just *way* too many words for you to bother and stuff them into a structured and ordered list. Your time is much better spent *doing* stuff in Japanese, and picking up the vocab as you go. Keep a little notepad (I keep a trusty Moleskine around at all times), and jot down anything you don't know, and devote some time every day to research these unknowns.
+
+Make sure to put a bunch of new words into your SRS, to make sure they eventually make it into your long-term memory.
+
+## Natural practice and fluency
+
+I'm not even sure about this stage. I speak three languages at native or near-native level, and yet I'm still unsure about what exactly fluency entails. At this stage, I'm assuming it's like the proverbial state of being in love: once you are, you'll just know.
+
+I intend to assume natural practice of the language as soon as my level allows it. My own idea of this would be watching anime with no subs, reading untranslated manga, Japanese video games, and hopefully some actual social interaction with Japanese natives. I'm still way too far off this stage, though, so I guess I'll document it once I'm a little further down the road.
+
+Hopefully, learning Japanese is as fun to you as it is to me. The language and culture are simply fascinating, and every new kanji, every new grammar point, every new cultural concept, amaze me beyond words. Happy 日本語 learning!

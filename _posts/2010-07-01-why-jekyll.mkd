@@ -1,0 +1,123 @@
+---
+title: Why Jekyll?
+meta: Loving me some Emacs
+byline: "Writing, for shell junkies"
+layout: post
+published: true
+---
+
+If you're looking for a post about how awesome Jekyll is, you're
+probably at the wrong place. I did indeed want to write such an
+article, but as I kept writing I noticed my mind was taking me
+elsewhere. I ended up writing more about the "why" than the "how" of
+keeping a blog with Jekyll. After reading through it a few times, I
+thought it might be worth publishing anyway. I also want to write
+about the technicalities behind my blog, since I have quite a few home
+grown tinkerings to share, but that will have to wait for another
+article.
+
+## What's wrong with blogging?
+
+I've tried for very long to keep up with a blog. One of the problems I
+encountered, laziness aside, was the dynamic nature of blogging
+software. "Why??" I can hear you scream. "Dynamic is good!", you say,
+and you are probably right. Dynamic is as good as ketchup. Tastes
+good, but not on every dish, really. You'll put it on fries, and have
+a great time. Put it in chicken soup, and the very idea will most
+likely make you frown. Dynamic is good, but only for so many
+things. It's really awesome when the content comes from multiple
+non-authoritative sources, like comments on a blog post, or a forum
+thread, or if content is subject to change *very* often, like
+real-time statistics.
+
+But I don't really need a whole
+ruby/php/perl/[lolcode](http://en.wikipedia.org/wiki/LOLCODE) stack
+sitting behind every browser request to see my blog. What's the point
+of that?  Okay, I said something about "comments on a blog post"
+above, so I've already spoilt myself. Well, my blog doesn't have
+comments, and I'm not sure it'll ever have, so that's my only reason
+for a dynamic back-end gone. By avoiding a dynamic front-end we also
+close down any security problems we might have had otherwise. And
+there's nothing faster or lighter on your server than plain-jane
+static HTML files.
+
+## Static files
+
+So... No need for dynamic back-end, check. Fast delivery, check. No
+need for a 12-server cluster, check. But wait, there's more! By working
+on static files, I don't have to type into some fancy <abbr
+title="What you see is definitely not what you get, or even
+close">WYSIWYG</abbr> text box, spiced up with 2Mb of java script so it
+looks, works (or not), and feels like MS Word. I mean to say, ewww!
+Where's my trusty Emacs? Ah, that's right... Right here, next to my
+static files.
+
+By using plain files to manage your blog content, you gain immensely
+in management power. We've been managing files since the dawn of
+computing, and there are more tools for this task than any other. And
+we also have *real* text editors, like Vim and Emacs. No matter how
+far HTML5 takes us, or how powerful browsers with java script become,
+there's just no point in even comparing that to the power of Emacs.
+
+Modern blogging software features version control for entries, but us
+old school folks from static-file land have had this for eons. All the
+way since the times of SCCS, through CVS, Subversion, and the new
+distributed thingies, version control is at the heart of the system
+admin and programmer. Just as above, the new web tools in this context
+have a long way to walk before we can even bother comparing them to
+real tools.
+
+Let's recap again. Light and fast, check. Easy management, check. Full
+featured version control, check. Now, what about deployment? When you
+type your stuff into a web form, you hit "submit" and, hey presto!
+Deployed. I don't think it can possibly be any simpler than that. But
+I'm willing to take a little simplicity sacrifice in order to obtain
+true management power. Note that I said "a little". So what do I do? I
+trust everything to [git](http://git-scm.com/ "Git Source Code
+Management"). Git is possibly the best <abbr title="Version Control
+System">VCS</abbr> out there; an argument only beaten by Bazaar fans,
+or (*shudder*) CVS fans. I have a pretty fancy (from a geek's point of
+view, anyway) deployment system that uses nothing but git. The
+document root on the server is a git repository I push to via SSH. A
+post-update hook then proceeds to update any dependencies and rebuild
+the site from the source, if necessary. And this leads us to Jekyll.
+
+## Jekyll
+
+If we take static files and content that changes over time, what do we
+get? Two decades ago, we'd probably be talking about <abbr
+title="Server Side Includes">SSI</abbr> or some fancypants perl
+script, at best. What we have today, is totally different, though. The
+concept is hardly new, but modern technology has a habit of taking old
+things to a new level. I'm talking about static content generators.
+
+A generator takes a bunch of templates that define the static part of
+the website, like headers, links, style sheets, and so on, and combine
+them with the content, which is stored separately. What comes out is a
+bunch of HTML files with absolutely nothing fancy in them. All the
+processing is done at build-time. When the content or the templates
+change, you regenerate the site. It sounds like a time hog, but it's
+hardly as bad. Rebuilding this site currently takes less than a
+second.
+
+I could have set up a gitosis server instead, and not use a straight
+shell login, or I could use that to host such blogs for my friends
+without giving them shell access to my server. The only thing you need
+is a git repo on the server you can somehow push to. If not gitosis,
+maybe a WebDAV server you can push to over plain http. Or an
+application on the server that responds to a ping and pulls from
+somewhere else. The limit is the sky. That's what git is all
+about. Have it your way.
+
+## So what?
+
+Writing is one of those things that require a certain state of
+mind. "Inspiration" you could say. I wouldn't feel comfortable calling
+what I do here an "art", but writing itself probably is. You can't do
+this properly unless you're comfortable with the task and your
+tools. And let's put some emphasis on "tools" there, because if you
+don't like them, it's going to become a chore soon enough. Being able
+to use the trusty tools I've been using for years, like the shell,
+emacs, and git, I don't have to think about *how* I do things, but
+simply do them. That's something a fancy web form won't give me, at
+least for another 10 years.

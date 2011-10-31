@@ -1,0 +1,16 @@
+---
+title: Proper deployment with Git
+byline: Git can be better than this.
+meta:
+layout: post
+published: false
+---
+I've seen dozens of these posts for a while. And they all make the same mistakes: they just somehow want their code to end up in the deployment folder. Seriously, you can do better than this. And so does Git. Git is a tool that doesn't shoehorn you into a workflow someone else came up with, and that probably doesn't fit you. That has been the problem with every other VCS under the sun, and the same goes for deployment. Everyone has their own way. Or at least, everyone *should* have their own way.
+
+I have a few little rules when it comes to deployment. First, the only files going in the web folder, are those *required* for the deployed application to run. And this surely doesn't include the `.git` folder. Second, I'd like to not have to log onto the server every time I want to push a new snapshot of my application. I get to keep enough ssh sessions around, and I don't need yet another one just to restart a few processes.
+
+There are countless tools out there, that handle the whole deployment thing quite nicely. But tell you what, you have absolutely no need for those, for Git provides you with everything you need. And all you need is shell access to your server, which you hopefully have anyway. Right?
+
+## Enter git hooks
+
+Now, I trust this is no news to you. Git has hooks. Little scripts that run when things happen, at different points in the process. You get a hook to run before a commit is accepted, or before you accept data pushed from elsewhere. And the only requirement for these scripts is that they need to be executable units. Bash, Ruby, Python, a compiled C++ program, whatever.
