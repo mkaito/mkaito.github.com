@@ -8,8 +8,6 @@ I wrote my first "pure" HTML application, which I called [Coppersplit Calculonic
 
 I'm now working on a different application, with maybe half a dozen common points with my first app. The main difference is that this time I need data synchronization across multiple clients. This poses a major problem, if I am to do it properly. Let me expand a little.
 
-{:toc}
-
 ## Data sync 101
 
 First, let's settle a few basic concepts. When I say "data synchronization", I mean the action of keeping multiple clients up to date on one or more arbitrary data sets. Like with so many other things in IT, there are at least three dozen ways to handle this, most of which are pretty obscure.
