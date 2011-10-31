@@ -156,7 +156,10 @@ article hgroup         { position: relative; }
 article hgroup h1      { position: absolute; left: 0; bottom: 0; }
 article hgroup h2      { font-size: 1.2em; font-weight: 100;
 			 position: absolute; right: 0; bottom: 0; }
-article footer p       { text-align: right; font-size: 0.8em;}
+article footer p:first-child { text-align: right; font-size: 0.8em;}
+article footer p.askme { font-size: 1.4em; text-align: center; padding 1em; }
+article footer p a { font-weight: bold; }
+article footer p:last-child { text-align: center; font-size: 1em; margin-top: -1.5em; }
 
 section header { position: relative; overflow: visible; }
 section header h1 { display: inline; }
