@@ -1,0 +1,30 @@
+---
+title: Jekyllator
+byline: A ZSH script to help you manage your Jekyll posts.
+meta: Having some Asahi スーパードライ
+layout: post
+published: true
+---
+I finally managed to finish this piece of shell script I've been using for a while. I wanted to improve the slug generation, as well as implement the publish and update functions before releasing this. I still have to implement tab completion on subcommands, but this should do for now. I'm happy to accept patches, if you're feeling contributive! You can see and download the script [here](https://github.com/mkaito/dotfiles/blob/master/bin/jekyllator.sh).
+
+## Writing weird shell scripts
+
+Shell scripting is somewhat of a lost discipline, with everyone rather using Perl, Python, Ruby, etc... I find shell scripting is a very portable way to write little helper scripts like this one. I could have written it in Ruby, sure, but then you'd have to install Ruby too to use it. This particular script is for a tool that runs under Ruby anyways, but a while ago I took the decision to write my helper scripts in bash/zsh whenever possible. It was a rather interesting exercise in string manipulation too. I learned a lot.
+
+The most interesting bit of shell-fu I had to write was most definitely the slugifier function. I was used to seeing these around in Ruby and such, but getting it to work in the shell required me to learn a few new bits of ZSH and sed. I was never big friends with sed, but he finally gave in, after sacrificing a couple goats to St. Linus.
+
+<script src="https://gist.github.com/1329280.js?file=jekyllator1.sh"></script>
+
+The string of sed calls will remove any extraneous white space, as well as make all characters lower case. The substitution isn't quite perfect, and I'm always trying to improve things as I encounter bugs, but I think it's already pretty good.
+
+I took the array of accent conversion from ActiveSupport, which seems to be widely considered a good implementation. Most slug converters just suppress accented characters, but I don't think that's quite correct. Replacing these with their "plain" counterparts prevents us from generating gibberish in texts that contain a lot of accents.
+
+<script src="https://gist.github.com/1329280.js?file=jekyllator2.sh"></script>
+
+This is a function I picked up a long time ago, and is very handy in writing any shell scripts that do things which might screw up. Moving files around is one of these things.
+
+<script src="https://gist.github.com/1329280.js?file=jekyllator3.sh"></script>
+
+This particular passage gave me quite some headaches, until I threw the towel and took the slightly hackier way. I wanted to insert "published: true" in the yaml preface if there wasn't already a "published" entry there, and it seems sed isn't very good at handling multi line situations. I thusly resorted to awk, which did this just fine, but didn't like me writing output back to it's input file, and left me with a blank file every time. The result of my headache, above.
+
+I hope you can find this of help when managing your jekyll posts. If you find a bug, or even a fix for one, make sure to let me know. Happy blogging!
