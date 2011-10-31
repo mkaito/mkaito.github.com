@@ -1,7 +1,7 @@
 ---
 pygments: true
 permalink: /:year/:title.html
-markdown: rdiscount
+markdown: redcarpet
 rdiscount:
   extensions: [generate_toc, smart]
   toc_token: "{:toc}"
