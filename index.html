@@ -2,38 +2,36 @@
 layout: default
 title: Index
 ---
-<section>
+<section id="posts">
   <header>
-    <hgroup>
-      <h1>Thoughts</h1>
-      <h2>Articles &amp; Links</h2>
-    </hgroup>
+    <h1>Thoughts</h1>
+    <h2>Articles &amp; Links</h2>
   </header>
   {% for article in site.posts %}
   <article>
     <header>
-      <hgroup>
-  <h1>
-    {% if article.link %}&#x2764;{% else %}&#9733;{% endif %} <a href="{% if article.link  %}{{ article.link }}{% else %}{{ article.url }}{% endif %}" title="{{ article.title }}">{{ article.title }}</a>
-  </h1>
-  <h2>&raquo; <time datetime="{{ article.date | date_to_xmlschema }}" pubdate>{{ article.meta }}</time></h2>
-      </hgroup>
-    </header>{% if article.byline %}
-    {{ article.byline | textilize }}{% endif %}
+        <h1>
+          {% if article.link %}&#x2764;{% else %}&#9733;{% endif %}
+	  <a href="{% if article.link  %}{{ article.link }}{% else %}{{ article.url }}{% endif %}" title="{{ article.title }}">{{ article.title }}</a>
+        </h1>
+        <h2>
+	  &raquo;
+	  <time datetime="{{ article.date | date_to_xmlschema }}" pubdate>{{ article.date | date: "%B %d %Y" }}{% if article.meta %} &mdash; {{ article.meta }}{% endif %}</time>
+	</h2>
+    </header>
+    {% if article.byline %}{{ article.byline | textilize }}{% endif %}
   </article>
   {% endfor %}
 </section>
 
-<section>
+<section id="projects">
   <header>
-    <hgroup>
-      <h1>Code</h1>
-      <h2>My slice of open source</h2>
-    </hgroup>
+    <h1>Code</h1>
+    <h2>My slice of open source</h2>
   </header>
   <ul id="projects">
-    <li><a href="http://github.com/mkaito/HaikuUI/">&raquo; eq2ui/haiku</a>A haiku-inspired UI mod for the game Everquest 2. I work on this as I find the time.</li>
-    <li><a href="http://github.com/mkaito/Raider/">&raquo; web/raider</a>A community website for a raiding guild. Was a very interesting exercise, and I keep this as my playground for certain ideas.</li>
+    <!-- <li><a href="http://github.com/mkaito/HaikuUI/">&raquo; eq2ui/haiku</a>A haiku-inspired UI mod for the game Everquest 2. I work on this as I find the time.</li> -->
+    <!-- <li><a href="http://github.com/mkaito/Raider/">&raquo; web/raider</a>A community website for a raiding guild. Was a very interesting exercise, and I keep this as my playground for certain ideas.</li> -->
     <li><a href="http://github.com/mkaito/dotfiles/">&raquo; personal/dotfiles</a>My configuration files for a host of software, including Emacs, (G)vim, awesome window manager, zsh, etc...</li>
   </ul>
 </section>

@@ -1,6 +1,0 @@
----
-title: Notion Ink Adam
-link: http://www.crunchgear.com/2010/06/09/notion-ink-adam-on-track-gets-funding-looks-at-hardware-variants/
-byline: "I want one, with Arch Linux, thanks."
-meta: June 12 2010 &mdash; Dreaming about tablets
----

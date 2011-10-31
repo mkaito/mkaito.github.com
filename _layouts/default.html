@@ -1,55 +1,113 @@
-<!DOCTYPE html><html lang="en">
+<!doctype html>
 
-  <head>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 
-    <meta charset="utf-8">
-      <title>Michishige KAITO | {{ page.title }}</title>
-    </meta>
+<head id="www-mkaito-com" data-template-set="html5-reset">
 
-    <link href="/atom.xml" rel="alternate" title="Michishige Kaito" type="application/atom+xml" />
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:light,regular,bold' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>{{ page.title }} :: mkaito.com</title>
+  
+  <meta name="title" content="Michishige Kaito">
+  <meta name="description" content="TODO">
+  
+  <meta name="google-site-verification" content="">
+  <!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
+  
+  <meta name="author" content="Michishige Kaito">
+  <meta name="Copyright" content="Copyright Michishige Kaito 2011. All Rights Reserved.">
 
-    <!--[if IE]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-      <link rel="stylesheet" href="/ie.css" type="text/css" />
-    <![endif]-->
+  <!-- Dublin Core Metadata : http://dublincore.org/ -->
+  <!--<meta name="DC.title" content="Pro">-->
+  <!--<meta name="DC.subject" content="What you're about.">-->
+  <!--<meta name="DC.creator" content="Who made this site.">-->
+  
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 
-    <!-- Homepage CSS -->
-    <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+  <!--<link rel="shortcut icon" href="_/img/favicon.ico">-->
+  <!-- This is the traditional favicon.
+     - size: 16x16 or 32x32
+     - transparency is OK
+     - see wikipedia for info on browser support: http://mky.be/favicon/ -->
+     
+  <!--<link rel="apple-touch-icon" href="_/img/apple-touch-icon.png">-->
+  <!-- The is the icon for iOS's Web Clip.
+     - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
+     - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
+     - Transparency is not recommended (iOS will put a black BG behind the icon) -->
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  
 
-  </head>
+  <link href="/atom.xml" rel="alternate" title="Michishige Kaito" type="application/atom+xml" />
+  <link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:light,regular,bold' rel='stylesheet' type='text/css'>
 
-  <body>
 
-    <div id="border">
-      <div id="container">
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-        <header>
-            <h1><a href="/" rel="home">Michishige Kaito</a></h1>
-        </header>
+  <script src="/js/modernizr-1.7.min.js"></script>
+  <script src="/js/head.min.js"></script>
+</head>
 
-        <div id="content">
-          {{ content }}
-        </div>
+<body>
 
-        <footer id="footer">
-          Don&#8217;t steal my stuff, it&#8217;s bad karma. If the site looks weird,
-          get a proper browser. {% comment %}<a href="http://kernest.com">Fonts by Kernest</a>{% endcomment %}
-        </footer>
+  <header>
 
-      </div> <!-- #container -->
-    </div>   <!-- #border -->
+  <h1><a href="/" rel="home">Michishige Kaito</a></h1>
 
-    {% comment %}<!-- BEGIN: SeeVolution --><img width=0 height=0 src="https://c.svlu.net/pixel.aspx"/><script type="text/javascript" src="https://c.svlu.net/JInitScript.js"></script><!-- END: SeeVolution  -->{% endcomment %}
-    {% comment %}<!-- BEGIN: SeeVolution --><script>svluArea="Conversion";</script><img width=0 height=0 src="https://c.svlu.net/pixel.aspx" />{% endcomment %}
-      {% comment %}<script type="text/javascript" src="https://c.svlu.net/JInitScript.js"></script><!-- END: SeeVolution -->{% endcomment %}
+  <nav>
 
-    <!-- http://mootools.net/ -->
-    <script src="/js/mootools.js"></script>
-    <script src="/js/site.js"></script>
+  {% comment %}<ol>{% endcomment %}
+    {% comment %}<li><a href="">Nav Link 1</a></li>{% endcomment %}
+    {% comment %}<li><a href="">Nav Link 2</a></li>{% endcomment %}
+    {% comment %}<li><a href="">Nav Link 3</a></li>{% endcomment %}
+  {% comment %}</ol>{% endcomment %}
 
-  </body>
+  </nav>
+
+  </header>
+
+  {{ content }}
+
+  <footer>
+
+  <p><small>Don&#8217;t steal my stuff, it&#8217;s bad karma. If the site looks weird, get a proper browser. {% comment %}<a href="http://kernest.com">Fonts by Kernest</a>{% endcomment %}</small></p>
+
+  </footer>
+
+<script type="text/javascript>
+  head.js({
+    jquery:     '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js',
+    functions:  '/js/functions.js',
+    site:       '/js/site.js'
+  });
+</script>
+
+{% comment %}
+<script>
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+{% endcomment %}
+
+</body>
 </html>
