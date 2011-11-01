@@ -10,7 +10,7 @@ layout: default
   </header>
   {{ content }}
   <footer>
-    <p>{{ page.date | date: "%B %d %Y " }} &mdash; {{ page.meta }}</p>
+  <p>{{ page.date | date: "%B %d %Y " }}{% if page.meta %} &mdash; {{ page.meta }}{% endif %}</p>
     <p class="askme">Ask me anything! Tweet me at <a href="http://twitter.com/michishigekaito">@michishigekaito</a>, or mail me at <a href="mailto:me@mkaito.com">me@mkaito.com</a>.</p>
     <p>Just as <a href="http://warpspire.com/ask/">Kyle Neath</a> does, I think comments on blogs suck. Be constructive and resonable, and I'll happily respond.</p>
   </footer>
