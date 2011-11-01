@@ -13,18 +13,67 @@ Shell scripting is somewhat of a lost discipline, with everyone rather using Per
 
 The most interesting bit of shell-fu I had to write was most definitely the slugifier function. I was used to seeing these around in Ruby and such, but getting it to work in the shell required me to learn a few new bits of ZSH and sed. I was never big friends with sed, but he finally gave in, after sacrificing a couple goats to St. Linus.
 
-<script src="https://gist.github.com/1329280.js?file=jekyllator1.sh"></script>
+{% highlight sh %}
+function slugify()
+{
+  [[ -z "$1" ]] && return 65;
+  s=`echo $1 |\
+     sed -e 's/\s\{1,\}/ /g' |\
+     sed 's/^[ \t]*//;s/[ \t]*$//g' |\
+     sed 's/ /-/g' | tr '[A-Z]' '[a-z]'`;
+  debug "1: $s";
+
+  typeset -A accents; # key value key value...
+  accents=( 'á' 'a' 'à' 'a' 'â' 'a' 'ä' 'a' 'ã' 'a'\
+            'é' 'e' 'è' 'e' 'ê' 'e' 'ë' 'e'\
+            'í' 'i' 'ì' 'i' 'î' 'i' 'ï' 'i'\
+            'ó' 'o' 'ò' 'o' 'ô' 'o' 'ö' 'o' 'õ' 'o'\
+            'ú' 'u' 'ù' 'u' 'û' 'u' 'ü' 'u'\
+            'ç' 'c' 'ñ' 'n')
+
+  for k in ${(k)accents}; do;
+    debug "Replacing $k with ${accents[$k]}";
+    s=`echo $s | sed -e "s/${k}/${accents[$k]}/g"`;
+  done;
+
+  s=`echo $s | sed -re 's/[^[:alnum:]]/-/g' | tr -s '-'`
+
+  debug "2: $s";
+
+  echo "$s";
+}
+{% endhighlight %}
 
 The string of sed calls will remove any extraneous white space, as well as make all characters lower case. The substitution isn't quite perfect, and I'm always trying to improve things as I encounter bugs, but I think it's already pretty good.
 
 I took the array of accent conversion from ActiveSupport, which seems to be widely considered a good implementation. Most slug converters just suppress accented characters, but I don't think that's quite correct. Replacing these with their "plain" counterparts prevents us from generating gibberish in texts that contain a lot of accents.
 
-<script src="https://gist.github.com/1329280.js?file=jekyllator2.sh"></script>
+{% highlight sh %}
+function confirm()
+{
+  echo -n "$@ [y/N] "
+  read answer
+  for response in y Y yes YES Yes Sure sure SURE OK ok Ok kk; do
+    [[ "_$answer" == "_$response" ]] && return 0
+  done
+
+  return 1
+}
+{% endhighlight %}
 
 This is a function I picked up a long time ago, and is very handy in writing any shell scripts that do things which might screw up. Moving files around is one of these things.
 
-<script src="https://gist.github.com/1329280.js?file=jekyllator3.sh"></script>
+{% highlight sh %}
+if egrep 'published' $ppath > /dev/null; then
+  mv $ppath "${POSTS_PATH}/${pubstr}"
+  sed -i 's/published:\sfalse/published: true/' "${POSTS_PATH}/${pubstr}"
+else
+  gawk 'NR>1 && $ppath=="---" {printf"published: true\n"}{print}'\
+    $ppath > "${POSTS_PATH}/${pubstr}"
+  rm $ppath
+fi
+{% endhighlight %}
 
-This particular passage gave me quite some headaches, until I threw the towel and took the slightly hackier way. I wanted to insert "published: true" in the yaml preface if there wasn't already a "published" entry there, and it seems sed isn't very good at handling multi line situations. I thusly resorted to awk, which did this just fine, but didn't like me writing output back to it's input file, and left me with a blank file every time. The result of my headache, above.
+This particular passage gave me quite some headaches, until I threw the towel and took the slightly hackier way. I wanted to insert "published: true" in the yaml preface if there wasn't already a "published" entry there, and it seems sed isn't very good at handling multi line situations. I thusly resorted to awk, which did this just fine, but didn't like me writing output back to it's input file, and left me with a blank file every time. Since I was going to move the file anyway, I used the destination as output and then removed the original file, which had exactly the same effect, but isn't quite as nice looking in the script.
 
 I hope you can find this of help when managing your jekyll posts. If you find a bug, or even a fix for one, make sure to let me know. Happy blogging!
