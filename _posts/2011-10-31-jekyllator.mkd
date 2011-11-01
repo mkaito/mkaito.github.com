@@ -21,7 +21,6 @@ function slugify()
      sed -e 's/\s\{1,\}/ /g' |\
      sed 's/^[ \t]*//;s/[ \t]*$//g' |\
      sed 's/ /-/g' | tr '[A-Z]' '[a-z]'`;
-  debug "1: $s";
 
   typeset -A accents; # key value key value...
   accents=( 'á' 'a' 'à' 'a' 'â' 'a' 'ä' 'a' 'ã' 'a'\
@@ -37,8 +36,6 @@ function slugify()
   done;
 
   s=`echo $s | sed -re 's/[^[:alnum:]]/-/g' | tr -s '-'`
-
-  debug "2: $s";
 
   echo "$s";
 }
