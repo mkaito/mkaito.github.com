@@ -21,11 +21,11 @@ GEM
     directory_watcher (1.4.1)
     fast-stemmer (1.0.0)
     kramdown (0.13.3)
-    liquid (2.3.0)
+    liquid (2.2.2)
     maruku (0.6.0)
       syntax (>= 1.0.0)
     posix-spawn (0.3.6)
-    rdiscount (1.6.8)
+    redcarpet (1.17.2)
     syntax (1.0.0)
 
 PLATFORMS
@@ -34,4 +34,5 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   jekyll!
-  rdiscount
+  liquid (= 2.2.2)
+  redcarpet
