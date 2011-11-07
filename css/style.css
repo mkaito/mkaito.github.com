@@ -165,7 +165,6 @@ article footer p + p         { font-size: 1.2em; text-align: center; padding 1em
                                -moz-border-radius-topright: 10px; -webkit-border-top-right-radius: 10px;
 			     }
 article footer p a           { font-weight: bold; }
-/* article footer p:last-child  { text-align: center; font-size: 1em; margin-top: -1.5em; } */
 
 section header               { position: relative; overflow: visible; }
 section header h1            { display: inline; }
