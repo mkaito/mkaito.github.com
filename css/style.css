@@ -157,9 +157,15 @@ article hgroup h1            { position: absolute; left: 0; bottom: 0; }
 article hgroup h2            { font-size: 1.2em; font-weight: 100;
                                position: absolute; right: 0; bottom: 0; }
 article footer p:first-child { text-align: right; font-size: 0.8em;}
-article footer p.askme       { font-size: 1.4em; text-align: center; padding 1em; }
+article footer p + p         { font-size: 1.2em; text-align: center; padding 1em;
+			       padding: 2em; background-color: #525252;
+			       -moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px;
+                               -moz-border-radius-bottomright: 10px; -webkit-border-bottom-right-radius: 10px;
+                               -moz-border-radius-topleft: 10px; -webkit-border-top-left-radius: 10px;
+                               -moz-border-radius-topright: 10px; -webkit-border-top-right-radius: 10px;
+			     }
 article footer p a           { font-weight: bold; }
-article footer p:last-child  { text-align: center; font-size: 1em; margin-top: -1.5em; }
+/* article footer p:last-child  { text-align: center; font-size: 1em; margin-top: -1.5em; } */
 
 section header               { position: relative; overflow: visible; }
 section header h1            { display: inline; }
@@ -169,6 +175,8 @@ section header h2            { display: inline; }
 body                         { background-color: #434343; color: #f3f3f3; }
 h1, h2, h3,
 h4, h5, h6                   { color: #ffcfaf ; }
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a             { color: #7f9f7f; }
 a:link, a:hover,
 a:visited, a:active          { color: #dca3a3; }
 
@@ -191,14 +199,20 @@ article                      { font-size: 1em; }
 article h1                   { font-size: 2em; }
 article h2                   { font-size: 1.4em; }
 article h3                   { font-size: 1.2em; }
-article h4, h5, h6           { font-size: 1em; }
+article h4, article h5,
+article h6                   { font-size: 1em; }
+
+a:link, a:hover,
+a:visited, a:active          { text-decoration: none; }
+
+article p a:link             { text-decoration: underline; }
 
 article ul                   { margin-left: -1.15em; padding-left: 1.15em; text-indent: -1.15em; }
 article ul li:before         { content: "\2192\0020"; text-indent: -1em; }
 article ul li                { margin-bottom: 1em; }
 
 body > header h1             { font-family: "Waiting for the Sunrise", Sans;
-                         font-size: 3em; }
+                               font-size: 3em; }
 body > header h1 a           { text-decoration: none; }
 
 p                            { line-height: 1.4em; margin-bottom: 1.5em; }
@@ -214,12 +228,13 @@ section#projects li a        { display: block; margin-left: -1em; }
 
 
 blockquote                   { padding: 0 0 0 2em;
-                         margin-top: 1em; margin-bottom: 1em;
-                         margin-left: -2em; border-left: 1px solid #6c6c9c;
-                         position: relative; }
+                               margin-top: 1em; margin-bottom: 1em;
+                               margin-left: -2em; border-left: 1px solid #6c6c9c;
+                               position: relative; }
 blockquote span.source       { display: block; margin-top: 1em; }
 
 body > footer                { text-align: center; margin-top: 3em; }
+body > footer p + p          { margin-top: -1.5em; font-size: 1em; }
 
 /* Print styles!
 -------------------------------------------------------------------------------*/

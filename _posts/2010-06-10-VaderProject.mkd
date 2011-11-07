@@ -1,6 +1,6 @@
 ---
 title: The Vader Project
 link: http://www.fubiz.net/galleries/set/the-vader-project/
-meta: Floating in Space"
+meta: Floating in Space
 byline: "What can I say, other than Epic?"
 ---
