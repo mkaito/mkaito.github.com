@@ -159,10 +159,10 @@ article hgroup h2            { font-size: 1.2em; font-weight: 100;
 article footer p:first-child { text-align: right; font-size: 0.8em;}
 article footer p + p         { font-size: 1.2em; text-align: center; padding 1em;
 			       padding: 2em; background-color: #525252;
-			       -moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px;
-                               -moz-border-radius-bottomright: 10px; -webkit-border-bottom-right-radius: 10px;
-                               -moz-border-radius-topleft: 10px; -webkit-border-top-left-radius: 10px;
-                               -moz-border-radius-topright: 10px; -webkit-border-top-right-radius: 10px;
+			       -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px;
+                               -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px;
+                               -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px;
+                               -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px;
 			     }
 article footer p a           { font-weight: bold; }
 
@@ -181,10 +181,10 @@ a:visited, a:active          { color: #dca3a3; }
 
 /* Pygments */
 div.highlight                { background-color: #535353; padding: 1em; margin: 1em 0;
-                               -moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px;
-                               -moz-border-radius-bottomright: 10px; -webkit-border-bottom-right-radius: 10px;
-                               -moz-border-radius-topleft: 10px; -webkit-border-top-left-radius: 10px;
-                               -moz-border-radius-topright: 10px; -webkit-border-top-right-radius: 10px;}
+                               -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px;
+                               -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px;
+                               -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px;
+                               -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px;}
 div.highlight pre            { white-space: pre-wrap; }
 
 /* Typography */
