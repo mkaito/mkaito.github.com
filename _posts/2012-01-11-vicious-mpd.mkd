@@ -1,0 +1,62 @@
+---
+title: Vicious widget for MPD
+byline: Can has unix socket?
+meta: Rewriting stuff
+layout: post
+published: true
+---
+I came back to awesome due to rather banal circumstances, and had grown accostumed to having a little ticker in the panel displaying whatever was playing at the moment in MPD. Since my status text was coming from conky while in dwm, it was rather easy over there. Turning to vicious, the awesome widget library (pun intended), I found that the built in mpd widget wasn't really as well written as I would have wished for, and was lacking any sort of support for MPD's unix sockets. In fact, it was shelling out and calling curl. I'd call this hacky if it was my own code, but it's not, so let's just assume the author was in a hurry and never came back.
+
+Now, my Lua-fu is about as horrible as it can get, and there didn't seem to be any readily available socket library for lua but luasocket, which didn't mention unix sockets at all on the official page. Scouring the not-so-official parts of the net, I found a few mentions to an undocumented `unix.c` file that would implement this functionality. Not only undocumented, but also not compiled by the default makefile in the luasocket distribution. I guess the Lua folks don't need unix sockets that often. Thank the Arch gods, there was abinary package available for arch, that had unix sockets compiled. Awesome.
+
+But no matter how awesome, undocumented stuff in a language you can't write a Hello World in without looking at some reference isn't exactly what you'd call fun. But being the nerd I am, I got myself a (couple) cup(s) of tea, and dove right in. It took a few hours until I figured it out, but it's running smoothly now. I also expanded the original field set to include elapsed time and duration of the current song, which I thought would be useful. The code, below. Just pass it as second argument to `vicious.register`, instead of a widget name.
+
+{% highlight lua %}
+function()
+   local function format_time(s)
+      local d = os.date("*t", tonumber(s))
+      return string.format("%d:%02d", d.min, d.sec)
+   end
+
+   local socket = { unix = require("socket.unix") }
+   local helpers = require("vicious.helpers")
+
+   local mpd_state  = {
+      ["{volume}"] = 0,
+      ["{state}"]  = "N/A",
+      ["{Artist}"] = "N/A",
+      ["{Title}"]  = "N/A",
+      ["{Album}"]  = "N/A",
+      ["{Genre}"]  = "N/A",
+      ["{Name}"]   = "N/A",
+      ["{file}"]   = "N/A",
+      ["{elapsed}"]= "N/A",
+      ["{length}"] = "N/A",
+   }
+
+   local mpdsock = socket.unix()
+   mpdsock:connect(os.getenv("MPD_HOST"))
+   mpdsock:send("status\ncurrentsong\nclose\n")
+   while true do
+      local f = mpdsock:receive()
+      if not f then break end
+
+      for k, v in string.gmatch(f, "([%w]+):[%s](.*)$") do
+	 if     k == "volume" then mpd_state["{"..k.."}"] = v and tonumber(v)
+	 elseif k == "state"  then mpd_state["{"..k.."}"] = helpers.capitalize(v)
+	 elseif k == "Artist" then mpd_state["{"..k.."}"] = helpers.escape(v)
+	 elseif k == "Title"  then mpd_state["{"..k.."}"] = helpers.escape(v)
+	 elseif k == "Album"  then mpd_state["{"..k.."}"] = helpers.escape(v)
+	 elseif k == "Genre"  then mpd_state["{"..k.."}"] = helpers.escape(v)
+	 elseif k == "Name" then mpd_state["{"..k.."}"] = helpers.escape(v)
+	 elseif k == "file" then mpd_state["{"..k.."}"] = helpers.escape(v)
+	 elseif k == "elapsed" then mpd_state["{elapsed}"] = v and format_time(v)
+	 elseif k == "Time" then mpd_state["{length}"] = v and format_time(v)
+	 end
+      end
+   end
+
+   mpdsock:close()
+   return mpd_state
+end,
+{% endhighlight %}
