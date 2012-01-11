@@ -1,6 +1,6 @@
 ---
-title: Proper deployment with Git
-byline: Git can be better than this.
+title: "Proper deployment with Git"
+byline: "Git can be better than this."
 meta:
 layout: post
 published: false

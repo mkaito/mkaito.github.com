@@ -1,7 +1,7 @@
 ---
-title: Nihongo!
+title: "Nihongo!"
 byline: A detour on the path of weeaboism
-meta: Smoking some 漢字
+meta: "Smoking some 漢字"
 layout: post
 published: true
 ---

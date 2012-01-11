@@ -1,7 +1,7 @@
 ---
 title: Writing a Wiki engine
 meta: Thinking in code
-byline: Simple things, rethought.
+byline: "Simple things, rethought."
 layout: post
 published: true
 ---

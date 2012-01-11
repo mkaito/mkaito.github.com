@@ -1,6 +1,6 @@
 ---
-title: Why Jekyll?
-meta: Loving me some Emacs
+title: "Why Jekyll?"
+meta: "Loving me some Emacs"
 byline: "Writing, for shell junkies"
 layout: post
 published: true

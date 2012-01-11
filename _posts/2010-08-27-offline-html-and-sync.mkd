@@ -1,7 +1,7 @@
 ---
-title: HTML applications and data synchronization
-meta: Producing weird algorithms
-byline: Incremental data synchronization in JS
+title: "HTML applications and data synchronization"
+meta: "Producing weird algorithms"
+byline: "Incremental data synchronization in JS"
 layout: post
 ---
 I wrote my first "pure" HTML application, which I called [Coppersplit Calculonicus](http://github.com/mkaito/coppersplit), and which is live [here](http://mkaito.github.com/coppersplit), as an educational exercise. It served my purpose well: learning serious JavaScript. Soon enough, I started using [web storage](http://dev.w3.org/html5/webstorage/) for backlog purposes, and to keep some user configurations. It was a perfect fit, since the app works on a set of data that doesn't need to be synchronized to anyone else. Whatever you did was stored locally, and loaded up again the next time you drove by.

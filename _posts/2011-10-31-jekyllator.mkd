@@ -1,7 +1,7 @@
 ---
 title: Jekyllator
-byline: A ZSH script to help you manage your Jekyll posts.
-meta: Having some Asahi スーパードライ
+byline: "A ZSH script to help you manage your Jekyll posts."
+meta: "Having some Asahi スーパードライ"
 layout: post
 published: true
 ---

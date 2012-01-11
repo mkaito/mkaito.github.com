@@ -1,9 +1,9 @@
 ---
-title: Kernest and Namoroka
-meta: Tinkering with @font-face
-byline: User agents matter
+title: "Kernest and Namoroka"
+meta: "Tinkering with @font-face"
+byline: "User agents matter"
 layout: post
----
+...
 While trying out <code>@font-face</code> and [Kernest](http://kernest.com), I ran into a rather weird issue. Viewing the site in my default browser, Firefox, would reveal a rather unappealing site with generic sans-serif fonts, and a header saying "your browser doesn't support <code>@font-face</code>". Wait, what? My browser? I'm pretty confident that Firefox 3.5+ does indeed supoort <code>@font-face</code>... Let's try this on chrome...
 
 Opening the same site in Chrome revealed a very different site with beautiful fonts all over the place. Huh. I had already included a nifty font for the header on this very site by this time, from Kernest, which would show in all it's awesomeness in Chrome, but a generic default font in my trusty Firefox.
