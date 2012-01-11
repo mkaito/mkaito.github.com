@@ -16,7 +16,7 @@ title: Index
         </h1>
         <h2>
 	  &raquo;
-	  <time datetime="{{ article.date | date_to_xmlschema }}" pubdate>{{ article.date | date: "%B %d %Y" }}{% if article.meta %} &mdash; {{ article.meta }}{% endif %}</time>
+	  <time datetime="{{ article.date | date_to_xmlschema }}" pubdate>{{ article.date | date: "%d %B %Y" }}{% if article.meta %} &mdash; {{ article.meta }}{% endif %}</time>
 	</h2>
     </header>
     {% if article.byline %}{{ article.byline | textilize }}{% endif %}
