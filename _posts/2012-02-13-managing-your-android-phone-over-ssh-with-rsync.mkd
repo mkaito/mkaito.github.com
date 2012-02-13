@@ -1,0 +1,36 @@
+---
+title: Managing your Android phone over SSH with Rsync
+byline:
+meta: 
+layout: post
+published: true
+---
+I was really excited when I got my hands on the Galaxy Nexus. After carrying around a symbian phone for years, an internet enabled, high resolution touchscreen phone was pretty much a geek's wet dream to me. So I went home, activated it, plugged the USB cable in, and.... nothing. Googling around taught me that there was some crap going on with mtplib that I wasn't really going to resolve. Folks on the Interwebs suggested installing an ftp-server app, and transfer things that way. I did this for a while, and it worked just fine. But the Linux-lover inside me knew there had to be a better way. Manually managing files across nodes is so 1970!
+
+So what do you do when you want to sync a folder from your computer with some other computer? If you answered anything but "rsync", go do your homework. If there's two things you'll find on any unix system, that's an ssh daemon, and rsync. Not even Bash is as ubiquitous! But, of course, I clashed with what Google thought would be "fine" for Android. It might be Linux at heart, but the surface sure doesn't look anything like Linux. Two really important things missing are daemons and a proper shell.
+
+Thankfully, there are a few SSHd apps on the market, some better than others. There is also at least one app that allows you to rsync from your phone, which is cool, but I'd rather handle things on my computer while the phone sits, dunno, in my pocket, or somewhere else. But no matter what you use, you should really see that it has support for key based authentication.
+
+I use SSHDroid myself, which is a great app. It will automatically launch the ssh daemon when a wifi connection is found, and shut down when it's gone. It does key based auth too. The only downside is that it won't automatically rescan your file system. QuickSSHD does this, but I found it to be very, very laggy. YMMV.
+
+Ideally, you'd be able to install an SSH daemon as system service, instead of an app you have to manually start and activate. But I don't see that happening on non-rooted devices. Send your letter bombs to Google.
+
+## Rsync
+
+Unfortunately, none of the above apps ship with an rsync executable, and Android itself certainly could care less about such a thing, so you'll have to get it yourself and install it on the phone, somewhere where your sshd can find and execute it.
+
+[This](http://linux.wxs.ro/2011/08/05/rsync-your-android/) handy page describes the process to do just that.
+
+## Putting it all together
+
+Once you have an ssh server running on your phone, it's time to do great stuff with it. Below are some shell functions I wrote to help me manage things through a staging folder. You do things in this folder, like adding or removing files, and then push to your phone. When pulling files from the phone, a compressed and encrypted snapshot will be created of the staging tree (which will contain any new files you had on the phone).
+
+You want to put these in your `.zshrc` or similar. I use ZSH myself, but this might just run fine in Bash. Let me know if it doesn't.
+
+<script src="https://gist.github.com/1819001.js"> </script>
+
+## Music
+
+If you're a console cowboy like me, chances are you use something like MPD to listen to your jams. I bet you'd like your hand crafted, carefully curated playlists on your portable jam-player, right? Well, I do, so I came up with the script below.
+
+<script src="https://gist.github.com/1805933.js"> </script>
