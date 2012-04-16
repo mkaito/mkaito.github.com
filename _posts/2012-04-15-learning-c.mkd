@@ -1,0 +1,34 @@
+---
+title: Learning C
+meta: April 15, 2012 &mdash; Programming my system
+byline: Wandering into computing arcane
+layout: post
+---
+
+I seem to be into learning languages of late. My venture into acquiring skill in Japanese communication continues to unfold as I climb to almost a thousand kanji. But that's not the only kind of language someone like me finds interest in. What's a nerd without a programming language or two, after all?
+
+`C`. No, not `C++`, `C#`, or `Whatever-C` is hot these days. `C99`. That's right, good old (very old) `C`. Why on earth would I bother, you say? `<Insert language here>` is so much better, fun, and efficient to write? `C` is a language of times past, and the only reason to ever use it is to maintain old projects? I call humbug, dear reader.
+
+I have three reasons to devote time to `C`, all of which are very personal.
+
+One, I personally don't consider someone to be a real programmer unless he has some `C` under his belt. Why? Because, two, `C` is part of computing history. Whatever it is you're using to run your system, I'm completely sure there's a very healthy amount of "plain" `C` involved. I'm not saying you're a horrible and worthless programmer for not knowing `C`. You simply aren't at your greatest yet. Just keep walking forward.
+
+It's is thanks to `C` we have computers like we know them today. It's like learning how your grandma has been making a stew for fifty years, so you can apply the knowledge to your own recipes. Like learning about the origins of football, in it's British sense of the word, in order to up your game with the knowledge of players gone by. If you want to be a better coder, then jump into the deep end of a language that doesn't hold your hand with every expression you write. 
+
+What about three? Well, I use [dwm][1]. You customize dwm to your liking by editing it's source code, which is "plain" `C`. dwm is an incredible window manager in terms of performance and stability, and I'd like to keep it, and more recently, bend it to my will. For this, I require `C` knowledge. The ups and downs about dwm's approach will lead into a very entertaining, yet rather useless, debate about software usability and `UX` design, which doesn't spark my interest enough to bother with. I like the way it works, and that's that.
+
+## Why not C++?
+
+For one, `C++` builds on `C`. A rather large amount of what I'll learn with `C` will transfer directly to `C++`. Not everything, I know, but a fair bit. `C++` is object oriented, which is great for large projects, but only gets in the way when all you want is a quick program to solve a task. You'd argue I should use a shell script or a Python program, but there's really no reason not to use `C` if the task is adequate. Also, writing short and trivial, yet useful programs is a great way to get to grips with a language. Nothing quite like scratching your own itch to keep you moving forward with a project.
+
+I do plan to eventually delve into `C++`, `D2`, or whatever comes next. But not right now. I want to learn "pure" `C` first, and write some things with it. I have some things in mind. The project driving my learning process is a port of my manga download script, which I wrote as a Bash flavoured shell script. It's simple enough to get me started quickly, and covers enough to allow me to learn the lower limits of the `C` style. Initially, I'll have to handle invocation arguments, HTTP connections, and archive management. Things I can add include parallelism, rc files, and support for multiple manga hosts. I can foresee this project walking along with me all the way into `C++`.
+
+## But I heard `<some language>` is just as good!
+
+Python. Perl. Ruby. Haskell. You name it. They can all be extended in pure `C`, some even in `C++`. Why? Because they know that `C` can be superior in performance. Notice that I said "can", and not "is". `C` gives you the power to make things work better, faster, stronger, but with great power comes great responsibility. You may just as well wreck your program's memory space, or make things three times as slow as they were in Perl. But if you know what you're doing, `C` allows you to have the CPU do exactly what you want. Have you ever wondered why certain functions from your language's standard lib are heaps and bounds faster than a close implementation you wrote? It's because they're not written in your language. They are written in `C`, and your language is just calling compiled `C` code behind the scenes.
+
+And that's just plain cool about `C`. It encourages you to step into the deep, instead of preventing you from doing so through arbitrary constraints. Seriously, you only ever learn how to swim properly in the deep waters. Let go of the armbands, and embrace the power. `C` is far from dead, no matter what the hipster programmers try to make you believe.
+
+Holy crap, this almost turned into a rant. I'll shut up now, okay?
+
+[1]: http://dwm.suckless.org/
