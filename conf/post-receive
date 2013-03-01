@@ -34,7 +34,7 @@ fi
 root=/srv/http/mkaito.com
 umask 002
 rm -rf $root/*
-git archivee "$head" | tar -x -m -C "$root"
+git archive "$head" | tar -x -m -C "$root"
 cd "$root"
 bundle install --deployment --quiet
 bundle exec jekyll ./html
