@@ -36,7 +36,7 @@ umask 002
 rm -rf $root/*
 git archive "$head" | tar -x -m -C "$root"
 cd "$root"
-bundle install --deployment --quiet
+/home/chris/.gem/ruby/1.9.1/bin/bundle install --deployment --quiet
 bundle exec jekyll ./html
 
 #git reset --hard
