@@ -146,14 +146,14 @@ ins                                                          {background-color: 
 mark                                                         {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
 
 /* Page layout */
-body                         { min-height: 100%; max-width: 62em; min-width: 32em; margin: 0 auto; /* center */ padding: 0 20px; }
+body                         { min-height: 100%; max-width: 62em; min-width: 20em; margin: 0 auto; /* center */ padding: 0 20px; }
 
 body > header                { height: 8em; position: relative; }
 body > header h1             { position: absolute; top: 0.5em; right: 0; }
 
 article                      { margin: 2em 0; }
 article hgroup               { position: relative; }
-article hgroup h1            { position: absolute; left: 0; bottom: 0; }
+article hgroup h1            { position: absolute; left: 0; bottom: 0; text-overflow: ellipsis; }
 article hgroup h2            { font-size: 1.2em; font-weight: 100;
                                position: absolute; right: 0; bottom: 0; }
 article footer p:first-child { text-align: right; font-size: 0.8em;}
@@ -237,9 +237,7 @@ body > footer p + p          { margin-top: -1.5em; font-size: 1em; }
 
 /* Print styles!
 -------------------------------------------------------------------------------*/
-@media print                                                 {
-
-
+@media print                 {
 
 }
 
@@ -248,9 +246,9 @@ body > footer p + p          { margin-top: -1.5em; font-size: 1em; }
 -------------------------------------------------------------------------------*/
 
 /* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px)                  {
-  
-    
+@media screen and (max-device-width: 720px)                  {
+    body > header            { height: 6em; margin-bottom: 8em; }
+    body > header h1         { top: 1em; right: 0; }
 }
 
 @media all and (orientation: portrait)                       {
