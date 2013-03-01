@@ -4,11 +4,11 @@
 
 set -e
 
-if [ "$GIT_DIR" = "." ]; then
-  # The script has been called as a hook; chdir to the working copy
-  cd ..
-  unset GIT_DIR
-fi
+#if [ "$GIT_DIR" = "." ]; then
+  ## The script has been called as a hook; chdir to the working copy
+  #cd ..
+  #unset GIT_DIR
+#fi
 
 # try to obtain the usual system PATH
 if [ -f /etc/profile ]; then
