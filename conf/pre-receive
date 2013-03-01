@@ -10,7 +10,7 @@ while read old_sha1 new_sha1 refname anothervalue ; do
     git show ${new_sha1}:conf/post-receive > /tmp/post-receive
 
     echo "Checking hook file for syntax errors..."
-    ruby -c /tmp/post-receive && mv -f /tmp/post-receive hooks/post-receive && chmod +x hooks/post-receive && echo "Done."
+    bash -n /tmp/post-receive && mv -f /tmp/post-receive hooks/post-receive && chmod +x hooks/post-receive && echo "Done."
 
     rm -f /tmp/post-receive
   fi
