@@ -53,8 +53,20 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <script src="/js/modernizr-1.7.min.js"></script>
-  <script src="/js/head.min.js"></script>
+  <script src="/js/modernizr.js"></script>
+	<script>
+		yepnope([{
+			load: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+			complete: function () {
+				if (!window.jQuery) {
+					yepnope('/js/jquery.min.js');
+				}
+			}
+			}, {
+			load: '/js/functions.js',
+			load: '/js/application.js',
+		}]);
+	</script>
 </head>
 
 <body>
@@ -78,13 +90,6 @@
   </footer>
 	{% endcomment %}
 
-<script type="text/javascript>
-  head.js({
-    jquery:     '//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js',
-    functions:  '/js/functions.js',
-    site:       '/js/site.js'
-  });
-</script>
 {% comment %}
 <script>
 

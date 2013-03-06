@@ -4,3 +4,34 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 @import compass/reset
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono)
+
+body
+  max-width: 42em
+  margin: 2em auto
+  background-color: #000
+  color: #33ff33
+  font-family: 'Ubuntu Mono', monospace
+  min-height: 100%
+
+
+// Console base style
+#wrap
+  min-height: 100%
+  position: relative
+
+  #console
+    line-height: 1.2em
+
+    p.prompt
+      margin-top: 0.6em
+
+    span.prompt
+      font-weight: bold
+
+    .cursor
+      text-decoration: blink
+
+// Typography
+h1
+  font-size: 1.3em

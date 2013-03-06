@@ -2,10 +2,6 @@
 layout: default
 title: Index
 ---
-<h1>Welcome</h1>
-<div id="console">
-	<p>Stuff happens here.</p>
-</div>
 {% comment %}
 <section id="posts">
   <header>
@@ -42,6 +38,18 @@ title: Index
 </section>
 {% endcomment %}
 
+<div id="wrap">
+	<div id="console">
+		<h1>Welcome to robocorp industries</h1>
+		<p>Attempting authorization with token found in ~/.ssh/id_rsa...</p>
+		<p>Authorization successful.</p>
+		<p>Mainframe access granted.</p>
+		<p>Welcome back, Administrator!</p>
+		<p class="prompt"><span class="pwd">~</span> <span class="prompt">#</span> <span class="command">ls -la</span><span class="cursor">█</span></p>
+	</div>
+</div>
+
+{% comment %}
 <script language="javascript">
 	articles = [
 	{% for article in site.posts %}
@@ -60,3 +68,4 @@ title: Index
 	{% endfor %}
 	];
 </script>
+{% endcomment %}
