@@ -2,6 +2,11 @@
 layout: default
 title: Index
 ---
+<h1>Welcome</h1>
+<div id="console">
+	<p>Stuff happens here.</p>
+</div>
+{% comment %}
 <section id="posts">
   <header>
     <h1>Thoughts</h1>
@@ -35,3 +40,23 @@ title: Index
     <li><a href="http://github.com/mkaito/dotfiles/">&raquo; personal/dotfiles</a>Configuration files for stuff, and small scripts.</li>
   </ul>
 </section>
+{% endcomment %}
+
+<script language="javascript">
+	articles = [
+	{% for article in site.posts %}
+		{
+			"type": {% if article.link %}"link"{% else %}"article"{% endif %},
+			{% if article.link %}
+			"url": "{{ article.link }}",
+			{% else %}
+			"body": "{{ article.content | strip_newlines | escape }}",
+			{% endif %}
+			{% if article.meta %}"meta": "{{ article.meta | escape_once }}",{% endif %}
+			"title": "{{ article.title }}",
+			"byline": "{{ article.byline | textilize | escape }}",
+			"date": new Date("{{ article.date | date_to_xmlschema  }}"),
+		},
+	{% endfor %}
+	];
+</script>
