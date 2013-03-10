@@ -7,7 +7,7 @@ while read old_sha1 new_sha1 refname anothervalue ; do
   echo $updated | grep 'config/post-receive' > /dev/null
   if [[ "$?" -eq "0" ]]; then
     echo "Updating post-receive hook... "
-    git show ${new_sha1}:conf/post-receive > /tmp/post-receive
+    git show ${new_sha1}:config/post-receive > /tmp/post-receive
 
     echo "Checking hook file for syntax errors..."
     bash -n /tmp/post-receive && mv -f /tmp/post-receive hooks/post-receive && chmod +x hooks/post-receive && echo "Done."
@@ -18,7 +18,7 @@ while read old_sha1 new_sha1 refname anothervalue ; do
   echo $updated | grep 'config/pre-receive' > /dev/null
   if [[ "$?" -eq "0" ]]; then
     echo "Updating pre-receive hook... "
-    git show ${new_sha1}:conf/pre-receive > /tmp/pre-receive
+    git show ${new_sha1}:config/pre-receive > /tmp/pre-receive
 
     echo "Checking hook file for syntax errors..."
     bash -n /tmp/pre-receive && mv -f /tmp/pre-receive hooks/pre-receive && chmod +x hooks/pre-receive && echo "Done."
@@ -29,7 +29,7 @@ while read old_sha1 new_sha1 refname anothervalue ; do
   echo $updated | grep 'config/unicorn.sh' > /dev/null
   if [[ "$?" -eq "0" ]]; then
     echo "Updating Unicorn init script... "
-    git show ${new_sha1}:conf/unicorn.sh > /tmp/unicorn
+    git show ${new_sha1}:config/unicorn.sh > /tmp/unicorn
 
     echo "Checking script file for syntax errors..."
     bash -n /tmp/unicorn && sudo mv -f /tmp/unicorn /etc/rc.d/unicorn && chmod +x /etc/rc.d/unicorn && echo "Done."
