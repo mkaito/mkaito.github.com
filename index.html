@@ -40,14 +40,19 @@ title: Index
 
 <div id="wrap">
 	<div id="console">
-		<h1>Welcome to robocorp industries</h1>
-		<p>Attempting authorization with token found in ~/.ssh/id_rsa...</p>
-		<p>Authorization successful.</p>
-		<p>Mainframe access granted.</p>
-		<p>Welcome back, Administrator!</p>
-		<p class="prompt"><span class="pwd">~</span> <span class="prompt">#</span> <span class="command">ls -la</span><span class="cursor">█</span></p>
+		<div id="output">
+		</div>
+		<p class="prompt"><span class="cwd">~</span> <input type="text" /><span class="cursor">█</span></p>
 	</div>
 </div>
+
+<script>
+	meta = {
+		"manpages": {
+			"mkaito": "manpage for mkaito, a very fine gentleman.",
+		},
+	}
+</script>
 
 {% comment %}
 <script language="javascript">
