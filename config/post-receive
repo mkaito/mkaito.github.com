@@ -61,17 +61,4 @@ cd "$root"
   #[ -x deploy/after_push ] && nohup deploy/after_push $oldrev $newrev 1>>$logfile 2>>$logfile &
 #fi
 
-# Re-deploy
-#root = "/srv/http/mkaito.com/"
-
-#commands = []
-#commands << "umask 002"
-#commands << "rm -rf #{root}/html/*"
-#commands << "git archive #{head} | tar -x -m -C #{root}"
-#commands << "cd #{root}"
-#commands << "echo Installing bundle"
-#commands << "bundle install --deployment --quiet"
-#commands >> "bundle exec jekyll #{root}/html"
-#system commands.join(" && ")
-
 # vim:ft=sh
