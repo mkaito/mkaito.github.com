@@ -41,13 +41,13 @@ while read old_sha1 new_sha1 refname anothervalue ; do
   for fname in ${updated}; do
     case ${fname##*.} in
       rb)
-        cmd="ruby -c"
+        cmd="/usr/bin/ruby -c"
         ;;
       haml)
-        cmd="haml -c"
+        cmd="/home/chris/.gem/ruby/1.9.1/bin/haml -c"
         ;;
       sass|scss)
-        cmd="sass -c"
+        cmd="/home/chris/.gem/ruby/1.9.1/bin/sass -c"
         ;;
     esac
 
