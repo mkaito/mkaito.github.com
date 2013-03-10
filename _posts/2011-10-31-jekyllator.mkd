@@ -3,7 +3,7 @@ title: Jekyllator
 byline: "A ZSH script to help you manage your Jekyll posts."
 meta: "Having some Asahi スーパードライ"
 layout: post
-published: true
+published: false
 ---
 I finally managed to finish this piece of shell script I've been using for a while. I wanted to improve the slug generation, as well as implement the publish and update functions before releasing this. I still have to implement tab completion on subcommands, but this should do for now. I'm happy to accept patches, if you're feeling contributive! You can see and download the script [here](https://github.com/mkaito/dotfiles/blob/master/bin/jekyllator.sh).
 
@@ -14,48 +14,48 @@ Shell scripting is somewhat of a lost discipline, with everyone rather using Per
 The most interesting bit of shell-fu I had to write was most definitely the slugifier function. I was used to seeing these around in Ruby and such, but getting it to work in the shell required me to learn a few new bits of ZSH and sed. I was never big friends with sed, but he finally gave in, after sacrificing a couple goats to St. Linus.
 
 {% highlight sh %}
-function slugify()
-{
-  [[ -z "$1" ]] && return 65;
-  s=`echo $1 |\
-     sed -e 's/\s\{1,\}/ /g' |\
-     sed 's/^[ \t]*//;s/[ \t]*$//g' |\
-     sed 's/ /-/g' | tr '[A-Z]' '[a-z]'`;
+		function slugify()
+		{
+			[[ -z "$1" ]] && return 65;
+			s=`echo $1 |\
+				 sed -e 's/\s\{1,\}/ /g' |\
+				 sed 's/^[ \t]*//;s/[ \t]*$//g' |\
+				 sed 's/ /-/g' | tr '[A-Z]' '[a-z]'`;
 
-  typeset -A accents; # key value key value...
-  accents=( 'á' 'a' 'à' 'a' 'â' 'a' 'ä' 'a' 'ã' 'a'\
-            'é' 'e' 'è' 'e' 'ê' 'e' 'ë' 'e'\
-            'í' 'i' 'ì' 'i' 'î' 'i' 'ï' 'i'\
-            'ó' 'o' 'ò' 'o' 'ô' 'o' 'ö' 'o' 'õ' 'o'\
-            'ú' 'u' 'ù' 'u' 'û' 'u' 'ü' 'u'\
-            'ç' 'c' 'ñ' 'n')
+			typeset -A accents; # key value key value...
+			accents=( 'á' 'a' 'à' 'a' 'â' 'a' 'ä' 'a' 'ã' 'a'\
+								'é' 'e' 'è' 'e' 'ê' 'e' 'ë' 'e'\
+								'í' 'i' 'ì' 'i' 'î' 'i' 'ï' 'i'\
+								'ó' 'o' 'ò' 'o' 'ô' 'o' 'ö' 'o' 'õ' 'o'\
+								'ú' 'u' 'ù' 'u' 'û' 'u' 'ü' 'u'\
+								'ç' 'c' 'ñ' 'n')
 
-  for k in ${(k)accents}; do;
-    debug "Replacing $k with ${accents[$k]}";
-    s=`echo $s | sed -e "s/${k}/${accents[$k]}/g"`;
-  done;
+			for k in ${(k)accents}; do;
+				debug "Replacing $k with ${accents[$k]}";
+				s=`echo $s | sed -e "s/${k}/${accents[$k]}/g"`;
+			done;
 
-  s=`echo $s | sed -re 's/[^[:alnum:]]/-/g' | tr -s '-'`
+			s=`echo $s | sed -re 's/[^[:alnum:]]/-/g' | tr -s '-'`
 
-  echo "$s";
-}
-{% endhighlight %}
+			echo "$s";
+		}
+		{% endhighlight %}
 
-The string of sed calls will remove any extraneous white space, as well as make all characters lower case. The substitution isn't quite perfect, and I'm always trying to improve things as I encounter bugs, but I think it's already pretty good.
+		The string of sed calls will remove any extraneous white space, as well as make all characters lower case. The substitution isn't quite perfect, and I'm always trying to improve things as I encounter bugs, but I think it's already pretty good.
 
-I took the array of accent conversion from ActiveSupport, which seems to be widely considered a good implementation. Most slug converters just suppress accented characters, but I don't think that's quite correct. Replacing these with their "plain" counterparts prevents us from generating gibberish in texts that contain a lot of accents.
+		I took the array of accent conversion from ActiveSupport, which seems to be widely considered a good implementation. Most slug converters just suppress accented characters, but I don't think that's quite correct. Replacing these with their "plain" counterparts prevents us from generating gibberish in texts that contain a lot of accents.
 
-{% highlight sh %}
-function confirm()
-{
-  echo -n "$@ [y/N] "
-  read answer
-  for response in y Y yes YES Yes Sure sure SURE OK ok Ok kk; do
-    [[ "_$answer" == "_$response" ]] && return 0
-  done
+		{% highlight sh %}
+		function confirm()
+		{
+			echo -n "$@ [y/N] "
+			read answer
+			for response in y Y yes YES Yes Sure sure SURE OK ok Ok kk; do
+				[[ "_$answer" == "_$response" ]] && return 0
+			done
 
-  return 1
-}
+			return 1
+		}
 {% endhighlight %}
 
 This is a function I picked up a long time ago, and is very handy in writing any shell scripts that do things which might screw up. Moving files around is one of these things.

@@ -3,7 +3,7 @@ title: Vicious widget for MPD
 byline: Can has unix socket?
 meta: Rewriting stuff
 layout: post
-published: true
+published: false
 ---
 I came back to awesome due to rather banal circumstances, and had grown accostumed to having a little ticker in the panel displaying whatever was playing at the moment in MPD. Since my status text was coming from conky while in dwm, it was rather easy over there. Turning to vicious, the awesome widget library (pun intended), I found that the built in mpd widget wasn't really as well written as I would have wished for, and was lacking any sort of support for MPD's unix sockets. In fact, it was shelling out and calling curl. I'd call this hacky if it was my own code, but it's not, so let's just assume the author was in a hurry and never came back.
 

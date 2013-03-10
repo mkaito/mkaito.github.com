@@ -1,6 +1,10 @@
 ---
 pygments: true
+future: false
+safe: true
+destination: ./html
 permalink: /:year/:title.html
+baseurl: /
 markdown: rdiscount
 rdiscount:
   extensions: [generate_toc, smart]
