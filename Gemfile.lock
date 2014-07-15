@@ -31,6 +31,7 @@ GEM
     pygments.rb (0.3.7)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
+    rake (10.3.2)
     rdiscount (1.6.8)
     safe_yaml (0.8.4)
     syntax (1.0.0)
@@ -42,4 +43,5 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   jekyll!
+  rake
   rdiscount
