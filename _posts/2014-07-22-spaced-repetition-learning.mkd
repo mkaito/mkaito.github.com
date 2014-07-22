@@ -131,6 +131,17 @@ came to be, why it is the way it is, and considering related facts) you provide
 your web of knowledge with additional connections. These connections are what
 make memories accessible.
 
+## Connect your notes
+
+When you have ten thousand cards in Anki (and no, that's not insane), it's very
+easy for notes to become isolated islands of knowledge, that are only available
+to you with the right cue and nothing else. To avoid this, ask connected
+questions. For example, ask "how is A different from B", or "what do A and B
+have in common".
+
+This relates to the previous section in that it connects your memories with
+more memories, which makes retrieval easier.
+
 ## Beware the *Easy* button
 
 Grading yourself properly in Anki takes a little practice, and is something
