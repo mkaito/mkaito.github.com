@@ -109,6 +109,28 @@ review scheduling of any of the other notes. That way, I can focus my reviews
 on the things that I have trouble remembering, instead of being swamped
 repeating things I remember just fine until I fall over.
 
+## Ask the right questions
+
+Avoid yes/no type questions. They require little understanding and reasoning
+and are pure memorization. "Is Fact A true?" doesn't teach you anything.
+Instead, ask "Why is Fact A true?", and force yourself to recite your
+reasoning.
+
+This will do two things. First, it forces you to understand the material you're
+learning, and allows you to deconstruct it in a way that makes random
+reassembly easier; i.e.: it allows you to apply concepts to novel problems by
+rearranging the pieces.
+
+Second, it will reveal to you where you are having trouble. Answering a yes/no
+question can be as much a matter of understanding as it can be one of luck. If
+you get lucky and don't see a card again for 90 days, you've wasted a lot of
+time that you should have spent reviewing something you forgot months ago.
+
+By making you think about the context and history of a concept (i.e.: how it
+came to be, why it is the way it is, and considering related facts) you provide
+your web of knowledge with additional connections. These connections are what
+make memories accessible.
+
 ## Beware the *Easy* button
 
 Grading yourself properly in Anki takes a little practice, and is something
