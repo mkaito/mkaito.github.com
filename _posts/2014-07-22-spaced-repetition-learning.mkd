@@ -1,0 +1,320 @@
+---
+title: Spaced Repetition Learning
+byline:
+meta: 
+layout: post
+published: true
+---
+Spaced Repetition builds on the concept of Active Recall Testing, meaning that
+instead of reading something twenty times, you test yourself by answering
+questions you can only answer if you understand and remember the topic. Active
+Recall builds a sort of "muscle memory" for the brain. Every time you trace a
+path in your brain to a certain memory, tracing the path again becomes easier.
+
+But blindly repeating recall testing ad nauseam isn't very useful past a very
+low threshold. The brain builds memories by allowing them to settle and
+percolate your long term memory. This takes time. Most long term memories are
+built during the REM sleep phase.
+
+Building strong memories that are easy to recall requires testing yourself
+daily, not repeating until you fall over from boredom. Once you've accessed a
+memory path, you are no longer retracing it by asking yourself the same
+question. The answer is already in your upper mind, and there's no need to
+access the memory regions of the brain.
+
+The "sweet spot" can be calculated according to a theory called the "Forgetting
+Curve", which dictates that every time we recall something, the memory becomes
+slightly more permanent. Think of it like walking a path just when it is about
+to fade. Ideally, you want to find yourself having to stop and think about the
+answer for a few seconds. If it "pops" into your mind instantly, you're testing
+too often. The mental process required to recall a memory that you are about to
+forget is incredibly powerful at converting short term memory into long term
+memory.
+
+In order to make sure we're retracing the same memory path every time we test
+ourselves, we need to make sure the memory we are trying to bring up is simple,
+and that the prompt is roughly the same. This way, we strengthen the existing
+prompt → answer path in our brains, instead of tracing new slight variations of
+the same path every time.
+
+It would be obvious by now that we require tools to aid our testing. We need to
+formulate knowledge in a certain way, write it down in a way that allows us to
+challenge ourselves, and schedule reviews at the appropriate times. It is the
+latter of these that makes the system somewhat cumbersome to use; but this is a
+task perfect for a computer program to solve.
+
+You're mostly on your own when it comes to formulating knowledge, but the
+storage and scheduling of your notes is best handled by what is known as Spaced
+Repetition Software. There are a number of options in this field, some free,
+some not; the one that stands out from the rest is called
+[Anki](http://ankisrs.net/). Mastering Anki is something that takes time, but
+is immensely rewarding if you find that spaced repetition works well for you.
+The program is very flexible, and a read-through of the manual is very much
+recommended. I made myself an [epub version of the
+manual](/files/anki-2.0-manual.epub), for easier reading.
+
+In learning to formulate knowledge the right way for review, [this
+article](http://www.supermemo.com/articles/20rules.htm) written by Dr Piotr
+Wozniak more than 10 years ago is a classic. It assumes the reader is a
+Supermemo user, but all of the concepts he touches are completely portable to
+any other system, including Anki.
+
+## Deconstructing textbook entries
+
+When presented with the challenge of remembering lengthy definitions, as was I
+when studying for my driving permit and trying to remember different kinds of
+road entities, I've found that presenting myself with a condensed version of
+the definition, and asking myself to answer with the defined term, was
+infinitely more rewarding than being presented with a term and asking myself to
+recite its definition.
+
+In this regard, I've found that recall implies recognition. If you are able to
+recall a word when prompted with its definition, you should also be able to
+remember the definition when presented with the word. This concept alone will
+save you oodles of review time, and make your reviews much more rewarding.
+Being presented with a word, and being asked to recite its definition is a
+dictionary case of *tedium*, especially if the definition is over a few words
+long.
+
+There are concepts and knowledge fields where two-way prompts are useful and
+encouraged, but beware of overzealous repetition.
+
+If there are key parts of the definition that I need to remember, I will create
+separate notes with pertinent questions.
+
+Allow me to illustrate. When presented with the following entry in my textbook:
+
+> An automobile is a motorized vehicle designed to transport people and/or
+freight, with a maximum speed over 45km/h, and a cylinder capacity exceeding
+50m^3.
+
+I will create the following notes:
+
+**Question**: Motorized vehicle designed to transport people and/or freight.
+**Answer**: Automobile
+
+**Question**: What is the maximum speed of an automobile?  **Answer**: Over
+45km/h.
+
+**Question**: What is the cylinder capacity of an automobile?
+**Answer**: Over 50m^3.
+
+**Question**: What is an automobile designed to do?
+**Answer**: Transport people and/or freight.
+
+As you can see, I've made sure that each important point is prompted for. I've
+also made sure each has its own note, so a leech doesn't drag the entire item
+down. If I have trouble remembering the maximum speed, it should not affect the
+review scheduling of any of the other notes. That way, I can focus my reviews
+on the things that I have trouble remembering, instead of being swamped
+repeating things I remember just fine until I fall over.
+
+## Beware the *Easy* button
+
+Grading yourself properly in Anki takes a little practice, and is something
+I've thought about extensively. In the end, you have to use what works for you,
+and Anki allows for extensive customization of its scheduling mechanism, but
+it's a subject worth touching briefly.
+
+The way Anki works is that you have to grade yourself, instead of having the
+program figure out whether you were right or wrong. The program can also not
+tell whether something was hard or easy for you to remember. It does, however,
+adjust its scheduling based on difficulty.
+
+When presented with a card, you can either fail yourself, or grade the
+difficulty "hard", "good", or "easy".
+
+"Hard" implies that while you were able to recall the required answer, it
+probably took you too long, or perhaps you got a little detail wrong that
+doesn't warrant failing the card. Note that some people advocate failing
+yourself for even the slightest mistake.
+
+"Good" is the default answer, and implies, quite simply, that you were able to
+recall the answer successfully after a few seconds of consideration. You will
+use this one most of the time.
+
+"Easy" implies that the review scheduling was too short, because the answer was
+still in your recent memory, and you were able to recall it without the
+slightest delay. Anki will reschedule the card with a much greater delay. If
+you are too trigger happy with the "Easy" button, you may find yourself failing
+a lot of cards afterwards due to an interval much too long.
+
+Failing or grading a card is a very subjective topic. As mentioned above, some
+people will advocate failing a card for the slightest of mistakes. Arguably, if
+your cards are dense enough, any "slightest mistake" will have you miss
+important information, and failing the card would be a good choice. Beware,
+however, of cards made up of more than one piece of information. Forgetting one
+detail but remembering the rest might be a sign you need to split it up into
+separate cards.
+
+As far as "Hard" vs "Good" goes, I find that I hardly ever use the "Hard"
+button. My cards are very succinct, and forgetting something generally implies
+a failure. My memory is very fast, and I know that if I'm not able to recall
+something within 3-5 seconds, I probably won't be able to recall it at all, no
+matter how long I mull over it. As such, the "Hard" button tends to be left
+unused, except for rare cases.
+
+I know how to grade myself because I know how my mind and my memory work. This
+is simply due to a lot of practice. You should take your time and find what
+works for you, and establish a basic set of rules for grading. That way, the
+grading becomes a habit, and your mind is free to think about the things you're
+studying instead of the difference between "Hard" and "Good".
+
+
+## *Do* review often
+
+One of the greatest things about Anki is the quick review pace. A single card
+doesn't usually take more than 2-3 seconds to review, and most are faster.
+Whenever I find myself idle, be it waiting for public transportation, or for
+the fiancée to get dressed, I can pull out my smartphone and dish out a few
+dozen cards.
+
+I've found that I can review hundreds of cards every day without a problem this
+way. If I had to sit down at the computer only to be faced with 300 cards, I'd
+probably just walk away annoyed.
+
+Every morning, I'll make myself some [bulletproof
+coffee](http://www.bulletproofexec.com/bulletproof-coffee-recipe/), and review
+while drinking it. It's like a morning workout, but for the brain. I generally
+manage 100-120 cards easily during the time it takes me to drink my cup. I will
+then review here and there during the day, on the phone, and do the rest of my
+reviews in the evening, right before I add any new material.
+
+My general workflow is to use a filtered deck that pulls any due cards from all
+other decks. This works very well for me, because I use Anki for a lot of
+different things, including Japanese, my driving permit material, little bits
+of computer knowledge, such as vim commands, tar commandline switches, and a
+lot of general things I want to remember, such as phone numbers and what not;
+but every single deck might only have half a dozen cards up for review on any
+given day, and I find that I review best when I get into a rhythm, which is
+broken by having to switch decks every 10 cards.
+
+Most of the time, I just review "things to remember", but I keep my decks tidy
+and organized, and all my cards properly tagged, in a way that allows me to
+focus my reviews when necessary. It's definitely worth the time to keep things
+organized.
+
+## *Don't* use shared decks.
+
+With a few exceptions, shared decks are pretty useless. This is because Anki is
+the final step in the learning process. Reviewing cards can not replace proper
+learning.
+
+Formulating knowledge properly can be hard, especially if you're just starting
+out, but having someone else do it for you doesn't solve the problem, and
+reviewing someone else's cards doesn't really help you learn.
+
+Every note you create is a personal cue to a certain memory, born of your own
+learning process and your existing memories. When faced with new knowledge you
+want to remember, you don't just blindly dump it into Anki. That would be a
+waste of time.
+
+You read/watch/listen to the material once. If you find it useful and worth
+remembering, you will probably go over it again, but at a slower pace. I like
+to go over things at least three times before attempting to formulate facts,
+but that's just me. If you have trouble understanding the subject, you might
+try to ask someone for help, look something up in a dictionary or on the
+internet. Once you fully understand the subject, you separate the interesting
+from the filler text. You digest this knowledge, and reword it to fit the way
+you think by connecting it with existing memories.
+
+When you're done processing the information, and you have points of information
+that you want to remember, it's time to dump things into Anki, using your own
+clues and wording.
+
+That's why using someone else's decks is pretty useless: you're skipping the
+entire process and using someone else's clues.
+
+Now, there are times where shared decks are definitely useful. For example, I
+use a shared deck for kanji, in the RTK format. This is fine because the
+personalized part of each note is the mnemonic story that goes with a
+keyword/kanji pair. The keywords and the kanji do not change. By using a shared
+deck, I can skip typing out over three thousand kanji and all of their
+keywords, and go straight to figuring out my stories.
+
+In cases like that, a shared deck can save you a lot of time, but you should
+not get used to finding shared decks for everything, and always prefer making
+your own.
+
+## *Don't* skip the obvious
+
+Anki is really good at getting the easy cards out of the way. After a few
+reviews, the intervals will be so big that you will only see the cards once in
+a blue moon. You will only be presented with them more often if you end up
+failing. This means that it's very easy to make sure your basics are well
+covered, and allows you to build your notes on them, instead of having to
+provide a lot of context with each and every one.
+
+An example, pulled from my driving license deck, is that the term "vehicle" has
+a very specific definition. I have a single note for this, which I haven't seen
+in weeks, and isn't scheduled for at least another month. I can confidently use
+this term in other notes, knowing that I know what the term means, because Anki
+will make sure I know it. And if I forget what a vehicle is, Anki will allow me
+to fail the card, and review it more often until it settles into memory.
+
+## *Don't* be afraid to throw it all out
+
+Getting things right in Anki can be hard, and takes a lot of practice. Even if
+you're a demigod of formulating knowledge in a magical way that makes learning
+and reviewing so easy your grandma could learn quantum physics in a week, the
+best way to feed things to Anki isn't always obvious.
+
+For example, I started my driving license permit studying with a lot of cloze
+deletion cards. These are cards where you paste some text, and mark regions
+that will be deleted, one per card. Your task is to be presented with this
+text, with a missing piece, and fill in the blank. I thought this was the
+obvious way to study all those road entity definitions. I was wrong, and
+reviews were beyond tedious. I didn't remember much. I deleted all of them.
+
+I then made cards that would present to me the term and ask for its definition.
+As legal definitions tend to be really lengthy, this was just as tedious as the
+cloze cards, if not more so. Recall rate improved slightly.
+
+I added a card template that flipped term and definition over, and I found that
+these cards were a lot easier to review, and also improved my performance in
+the term → definition cards. This was enlightening.
+
+I separated term definitions into their own note type, which generated two
+cards: one for recall and one for recognition. I made a separate note type for
+regular questions, that did not generate an inverse card.
+
+After some more time, I realized that the definition recognition cards were
+*really* tedious to review, and gnawed at my will to even start reviewing. I
+found that whenever I was faced with such a card, my concentration would vanish
+almost instantly. I deleted the recognition template from the note type, and
+started reviewing only with recall.
+
+I found that my recognition rate did not drop at all. Whenever I encountered a
+term in some other note, I would immediately recall its definition. This made
+me feel like I had wasted my time with the recognition drills that were so
+tedious, and which I forced myself to do anyway, because I thought it was
+necessary.
+
+During this entire process, I probably deleted all my cards at least 6 times,
+because I was simply not happy with the way I formulated the knowledge.
+Circulation law is dense, aseptic, and things that seem irrelevant will often
+turn out to be important. It took me a few tries to find a good way to
+formulate things in a way that made reviews pleasant and facts easy to
+remember. I'm glad I wasn't afraid to throw things out the window when I wasn't
+happy with them, because otherwise I'd be stuck reviewing terrible notes.
+
+## Dismiss the leeches
+
+When you fail a card very often, it will be tagged as a "leech" by Anki, and
+suspended. By default, this threshold is 8 failures, but you can adjust that.
+When you fail a card that often, it is often a sign that you need to rethink
+the way you formulated the fact on that card, but it can also mean that it
+quite simply is not a fact that you find interesting, to the point where you
+refuse to remember it. I call these facts "natural leeches".
+
+For example, agricultural vehicle classification was one hell of a natural
+leech for me. Who the hell cares about the difference between a produce truck
+and a machinery truck?
+
+Don't be afraid of skipping these natural leeches, because they will drag your
+entire review session down, and just make you feel bad about not remembering
+them, eating away at your motivation. You quite simply do not need to remember
+everything. Getting 100% on a test is amazing, and you should pat yourself on
+the shoulder with a big ale, but it's not *necessary*. Try hard, never give up,
+but learn to compromise when something threatens the overall wellbeing of your
+learning process.
